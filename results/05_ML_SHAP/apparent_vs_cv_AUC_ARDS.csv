@@ -1,0 +1,13 @@
+"model","cv_AUC","apparent_AUC","gap"
+"LR",0.95,1,0.05
+"LASSO",1,1,0
+"Ridge",1,1,0
+"ENet",1,1,0
+"RF",1,1,0
+"SVM",1,1,0
+"XGB",0.95,1,0.05
+"GBM",NA,NA,NA
+"DT",0.75,1,0.25
+"KNN",1,1,0
+"NB",1,1,0
+"NN",1,1,0

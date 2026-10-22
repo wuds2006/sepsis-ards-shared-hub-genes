@@ -1,0 +1,11 @@
+gene,ligand,affinity,site
+CDK5RAP2,EGCG,-6.092,centroid
+CDK5RAP2,quercetin,-6.373,centroid
+CDK5RAP2,tetrahydroalstonine,-6.619,centroid
+CDK5RAP2,resveratrol,-6.207,centroid
+CDK5RAP2,curcumin,-6.341,centroid
+CDK5RAP2,baicalein,-6.631,centroid
+CDK5RAP2,luteolin,-6.417,centroid
+CDK5RAP2,kaempferol,-6.18,centroid
+CDK5RAP2,berberine,-6.679,centroid
+CDK5RAP2,emodin,-6.91,centroid

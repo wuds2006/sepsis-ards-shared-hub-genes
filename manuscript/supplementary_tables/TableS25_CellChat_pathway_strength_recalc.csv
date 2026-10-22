@@ -1,0 +1,58 @@
+cohort,comparison,pathway,strength_group1,strength_group2,diff_group2_minus_group1,ratio_group2_over_group1,dominant_side,weight_LR_pairs_group1,weight_LR_pairs_group2,rank_by_abs_diff
+GSE151263 (PBMC),sepsis versus ARDS,MHC-I,0.0016401363,0.0049729459,0.0033328096,3.03203209391805,Sepsis,62,64,1
+GSE151263 (PBMC),sepsis versus ARDS,MIF,0.0006427179,0.0012413895,0.0005986716,1.93146868945147,Sepsis,66,23,2
+GSE151263 (PBMC),sepsis versus ARDS,CD99,0,0.0002470514,0.0002470514,NA,Sepsis,0,28,3
+GSE151263 (PBMC),sepsis versus ARDS,APP,0,0.0001259063,0.0001259063,NA,Sepsis,0,10,4
+GSE151263 (PBMC),sepsis versus ARDS,GALECTIN,3.85256e-05,0.0001402196,0.000101694,3.63964740328509,Sepsis,32,60,5
+GSE151263 (PBMC),sepsis versus ARDS,RESISTIN,1.56185e-05,0.0001030178,8.73993e-05,6.59588308736434,Sepsis,14,18,6
+GSE151263 (PBMC),sepsis versus ARDS,CLEC,7.18446e-05,0,-7.18446e-05,0,ARDS,22,0,7
+GSE151263 (PBMC),sepsis versus ARDS,THBS,1.82215e-05,8.58484e-05,6.76269e-05,4.71137941442801,Sepsis,14,21,8
+GSE151263 (PBMC),sepsis versus ARDS,ANNEXIN,4.6855e-06,5.2463e-05,4.77775e-05,11.1968840038416,Sepsis,6,18,9
+GSE151263 (PBMC),sepsis versus ARDS,PECAM1,4.6855e-06,3.43393e-05,2.96538e-05,7.32884430690428,Sepsis,9,9,10
+GSE151263 (PBMC),sepsis versus ARDS,Prostaglandin,0,1.43081e-05,1.43081e-05,NA,Sepsis,0,8,11
+GSE151263 (PBMC),sepsis versus ARDS,CD45,7.2886e-06,0,-7.2886e-06,0,ARDS,7,0,12
+GSE151263 (PBMC),sepsis versus ARDS,LCK,4.6855e-06,1.14465e-05,6.761e-06,2.44296233059439,Sepsis,3,3,13
+GSE151263 (PBMC),sepsis versus ARDS,CD23,0,4.9946e-06,4.9946e-06,NA,Sepsis,0,2,14
+GSE151263 (PBMC),sepsis versus ARDS,ADGRE,3.1237e-06,7.631e-06,4.5073e-06,2.44293626148478,Sepsis,6,8,15
+GSE151263 (PBMC),sepsis versus ARDS,BAFF,1.3015e-06,2.8616e-06,1.5601e-06,2.19869381482904,Sepsis,3,3,16
+GSE151263 (PBMC),sepsis versus ARDS,Cholesterol,1.5618e-06,2.8616e-06,1.2998e-06,1.83224484569087,Sepsis,3,3,17
+GSE151263 (PBMC),sepsis versus ARDS,ICAM,1.1641e-06,0,-1.1641e-06,0,ARDS,1,0,18
+GSE167363 (CD14+ monocytes),sepsis versus healthy control,MHC-II,0.0133712238,0.0018682572,-0.0115029666,0.139722229464142,HC,11,12,1
+GSE167363 (CD14+ monocytes),sepsis versus healthy control,CD99,0.0012351641,0.0005728564,-0.0006623077,0.463789710209356,HC,3,2,2
+GSE167363 (CD14+ monocytes),sepsis versus healthy control,RESISTIN,7.42551e-05,0.000676145,0.0006018899,9.10570452399902,Sepsis,2,2,3
+GSE167363 (CD14+ monocytes),sepsis versus healthy control,CypA,0.0005878143,0.0009761554,0.0003883411,1.66065269252551,Sepsis,1,1,4
+GSE167363 (CD14+ monocytes),sepsis versus healthy control,MHC-I,9.6687e-06,0.0003953746,0.0003857059,40.8922192228531,Sepsis,5,1,5
+GSE167363 (CD14+ monocytes),sepsis versus healthy control,APP,0.0009248264,0.0005423894,-0.000382437,0.586476986383607,HC,3,2,6
+GSE167363 (CD14+ monocytes),sepsis versus healthy control,MIF,0.0028519224,0.0031631842,0.0003112618,1.10914104815755,Sepsis,2,2,7
+GSE167363 (CD14+ monocytes),sepsis versus healthy control,ADGRE,6.18791e-05,0.0001706506,0.0001087715,2.75780675543115,Sepsis,2,1,8
+GSE167363 (CD14+ monocytes),sepsis versus healthy control,CCL,0.0003924997,0.0002885718,-0.0001039279,0.735215339018094,HC,2,3,9
+GSE167363 (CD14+ monocytes),sepsis versus healthy control,THBS,6.188e-06,9.90984e-05,9.29104e-05,16.0146089204913,Sepsis,3,3,10
+GSE167363 (CD14+ monocytes),sepsis versus healthy control,CLEC,9.90042e-05,1.79723e-05,-8.10319e-05,0.1815306825367,HC,3,4,11
+GSE167363 (CD14+ monocytes),sepsis versus healthy control,BAFF,2.3205e-06,6.71853e-05,6.48648e-05,28.9529411764706,Sepsis,3,3,12
+GSE167363 (CD14+ monocytes),sepsis versus healthy control,ANNEXIN,0.000179825,0.0002378327,5.80077e-05,1.32257861810093,Sepsis,1,2,13
+GSE167363 (CD14+ monocytes),sepsis versus healthy control,GALECTIN,0.0009119116,0.0008540004,-5.79112000000001e-05,0.936494721637492,HC,4,4,14
+GSE167363 (CD14+ monocytes),sepsis versus healthy control,ICAM,8.88991e-05,0.000142186,5.32869e-05,1.59940876791779,Sepsis,7,7,15
+GSE167363 (CD14+ monocytes),sepsis versus healthy control,COLLAGEN,5.06632e-05,0,-5.06632e-05,0,HC,2,0,16
+GSE167363 (CD14+ monocytes),sepsis versus healthy control,PECAM1,6.98054e-05,2.14995e-05,-4.83059e-05,0.307991931856275,HC,1,1,17
+GSE167363 (CD14+ monocytes),sepsis versus healthy control,PECAM2,0,4.03112e-05,4.03112e-05,NA,Sepsis,0,1,18
+GSE167363 (CD14+ monocytes),sepsis versus healthy control,TGFb,3.40374e-05,0,-3.40374e-05,0,HC,1,0,19
+GSE167363 (CD14+ monocytes),sepsis versus healthy control,Prostaglandin,0.0002807719,0.000306702,2.59301e-05,1.09235290283679,Sepsis,4,7,20
+GSE167363 (CD14+ monocytes),sepsis versus healthy control,CD80,0,2.41865e-05,2.41865e-05,NA,Sepsis,0,1,21
+GSE167363 (CD14+ monocytes),sepsis versus healthy control,GRN,0,1.61247e-05,1.61247e-05,NA,Sepsis,0,1,22
+GSE167363 (CD14+ monocytes),sepsis versus healthy control,NECTIN,0,1.20934e-05,1.20934e-05,NA,Sepsis,0,1,23
+GSE167363 (CD14+ monocytes),sepsis versus healthy control,TNF,1.39229e-05,4.3671e-06,-9.5558e-06,0.313663101796321,HC,2,2,24
+GSE167363 (CD14+ monocytes),sepsis versus healthy control,ESAM,7.735e-07,1.01618e-05,9.3883e-06,13.1374272786037,Sepsis,1,1,25
+GSE167363 (CD14+ monocytes),sepsis versus healthy control,PARs,0,8.7342e-06,8.7342e-06,NA,Sepsis,0,1,26
+GSE167363 (CD14+ monocytes),sepsis versus healthy control,Cholesterol,9.2819e-06,1.3437e-06,-7.9382e-06,0.144765619108157,HC,1,1,27
+GSE167363 (CD14+ monocytes),sepsis versus healthy control,IFN-II,0,5.8547e-06,5.8547e-06,NA,Sepsis,0,1,28
+GSE167363 (CD14+ monocytes),sepsis versus healthy control,IL16,6.188e-06,1.0078e-06,-5.1802e-06,0.162863606981254,HC,1,1,29
+GSE167363 (CD14+ monocytes),sepsis versus healthy control,SELPLG,6.1879e-06,1.00779e-05,3.89e-06,1.62864622893066,Sepsis,2,2,30
+GSE167363 (CD14+ monocytes),sepsis versus healthy control,SEMA4,6.188e-06,2.6874e-06,-3.5006e-06,0.434292178409825,HC,2,1,31
+GSE167363 (CD14+ monocytes),sepsis versus healthy control,IL1,2.3205e-06,0,-2.3205e-06,0,HC,1,0,32
+GSE167363 (CD14+ monocytes),sepsis versus healthy control,LAIR1,0,2.0156e-06,2.0156e-06,NA,Sepsis,0,1,33
+GSE167363 (CD14+ monocytes),sepsis versus healthy control,SEMA7,0,1.0078e-06,1.0078e-06,NA,Sepsis,0,1,34
+GSE167363 (CD14+ monocytes),sepsis versus healthy control,GP1BA,1.7296e-06,2.6664e-06,9.368e-07,1.54162812210916,Sepsis,1,1,35
+GSE167363 (CD14+ monocytes),sepsis versus healthy control,CD137,0,4.199e-07,4.199e-07,NA,Sepsis,0,1,36
+GSE167363 (CD14+ monocytes),sepsis versus healthy control,BAG,3.867e-07,0,-3.867e-07,0,HC,1,0,37
+GSE167363 (CD14+ monocytes),sepsis versus healthy control,LXA4,0,3.359e-07,3.359e-07,NA,Sepsis,0,1,38
+GSE167363 (CD14+ monocytes),sepsis versus healthy control,MPZ,0,2.1e-08,2.1e-08,NA,Sepsis,0,1,39

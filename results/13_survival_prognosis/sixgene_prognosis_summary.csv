@@ -1,0 +1,2 @@
+"model","AUC_7d","AUC_14d","AUC_28d","AUC28_CI","logrank_P","surv28_low","surv28_high"
+"Clinical + Hub6 six-gene score",0.638,0.634,0.613,"0.568-0.709",0.00197,0.828,0.703

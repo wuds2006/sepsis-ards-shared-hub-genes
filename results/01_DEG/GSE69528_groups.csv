@@ -1,0 +1,139 @@
+sample,source_name,title,group
+GSM1702888,Uninfected healthy,CIU11-318,Control
+GSM1702889,Uninfected type 2 diabetes mellitus,CIU11-322,EXCLUDE_t2dm
+GSM1702890,Uninfected type 2 diabetes mellitus,CIU11-323,EXCLUDE_t2dm
+GSM1702891,Uninfected type 2 diabetes mellitus,CIU11-326,EXCLUDE_t2dm
+GSM1702892,Uninfected type 2 diabetes mellitus,CIU11-335,EXCLUDE_t2dm
+GSM1702893,Uninfected type 2 diabetes mellitus,CIU11-336,EXCLUDE_t2dm
+GSM1702894,Uninfected type 2 diabetes mellitus,CIU11-338,EXCLUDE_t2dm
+GSM1702895,Uninfected type 2 diabetes mellitus,CIU11-339,EXCLUDE_t2dm
+GSM1702896,Uninfected healthy,CIU11-346,Control
+GSM1702897,Uninfected healthy,CIU11-347,Control
+GSM1702898,Uninfected healthy,CIU11-351,Control
+GSM1702899,Uninfected healthy,CIU11-352,Control
+GSM1702900,Uninfected healthy,CIU11-353,Control
+GSM1702901,Uninfected healthy,CIU11-354,Control
+GSM1702902,Uninfected healthy,CIU11-359,Control
+GSM1702903,Uninfected healthy,CIU11-360,Control
+GSM1702904,Uninfected healthy,CIU11-363,Control
+GSM1702905,Uninfected type 2 diabetes mellitus,CIU11-364,EXCLUDE_t2dm
+GSM1702906,Uninfected healthy,CIU11-365,Control
+GSM1702907,Uninfected type 2 diabetes mellitus,CIU11-367,EXCLUDE_t2dm
+GSM1702908,Uninfected healthy,CIU11-368,Control
+GSM1702909,Uninfected healthy,CIU11-369,Control
+GSM1702910,Uninfected healthy,CIU12-0486,Control
+GSM1702911,Uninfected healthy,CIU12-0489,Control
+GSM1702912,Uninfected healthy,CIU12-0490,Control
+GSM1702913,Uninfected healthy,CIU12-0492,Control
+GSM1702914,Uninfected healthy,CIU12-0494,Control
+GSM1702915,Uninfected type 2 diabetes mellitus,CIU12-0496,EXCLUDE_t2dm
+GSM1702916,Uninfected type 2 diabetes mellitus,CIU12-0497,EXCLUDE_t2dm
+GSM1702917,Uninfected type 2 diabetes mellitus,CIU12-0498,EXCLUDE_t2dm
+GSM1702918,Uninfected type 2 diabetes mellitus,CIU12-0499,EXCLUDE_t2dm
+GSM1702919,Uninfected type 2 diabetes mellitus,CIU12-0501,EXCLUDE_t2dm
+GSM1702920,Uninfected healthy,CIU12-0503,Control
+GSM1702921,Uninfected healthy,CIU12-0504,Control
+GSM1702922,Uninfected healthy,CIU12-0505,Control
+GSM1702923,Uninfected healthy,CIU12-0506,Control
+GSM1702924,Uninfected type 2 diabetes mellitus,CIU12-0507,EXCLUDE_t2dm
+GSM1702925,Uninfected type 2 diabetes mellitus,CIU12-0508,EXCLUDE_t2dm
+GSM1702926,Uninfected type 2 diabetes mellitus,CIU12-0510,EXCLUDE_t2dm
+GSM1702927,Uninfected type 2 diabetes mellitus,CIU12-0511,EXCLUDE_t2dm
+GSM1702928,Uninfected type 2 diabetes mellitus,CIU12-0512,EXCLUDE_t2dm
+GSM1702929,Uninfected healthy,CIU12-0515,Control
+GSM1702930,Uninfected healthy,CIU12-0517,Control
+GSM1702931,Uninfected healthy,CIU12-0518,Control
+GSM1702932,Uninfected healthy,CIU12-0519,Control
+GSM1702933,Uninfected healthy,CIU12-0520,Control
+GSM1702934,Uninfected healthy,CIU12-0521,Control
+GSM1702935,Uninfected type 2 diabetes mellitus,CIU12-0522,EXCLUDE_t2dm
+GSM1702936,Uninfected type 2 diabetes mellitus,CIU12-0523,EXCLUDE_t2dm
+GSM1702937,Uninfected type 2 diabetes mellitus,CIU12-0524,EXCLUDE_t2dm
+GSM1702938,Uninfected type 2 diabetes mellitus,CIU12-0525,EXCLUDE_t2dm
+GSM1702939,Uninfected type 2 diabetes mellitus,CIU12-0526,EXCLUDE_t2dm
+GSM1702940,Uninfected type 2 diabetes mellitus,CIU12-0528,EXCLUDE_t2dm
+GSM1702941,Uninfected type 2 diabetes mellitus,CIU12-0530,EXCLUDE_t2dm
+GSM1702942,Uninfected type 2 diabetes mellitus,CIU12-0531,EXCLUDE_t2dm
+GSM1702943,patients with sepsis caused by B. pseudomallei,MK09-652,Sepsis
+GSM1702944,patients with sepsis caused by B. pseudomallei,MK09-653,Sepsis
+GSM1702945,patients with sepsis caused by B. pseudomallei,MK09-663,Sepsis
+GSM1702946,patients with sepsis caused by B. pseudomallei,MK09-664,Sepsis
+GSM1702947,patients with sepsis caused by B. pseudomallei,MK09-672,Sepsis
+GSM1702948,patients with sepsis caused by B. pseudomallei,MK09-683,Sepsis
+GSM1702949,patients with sepsis caused by B. pseudomallei,MK09-686,Sepsis
+GSM1702950,patients with sepsis caused by B. pseudomallei,MK09-687,Sepsis
+GSM1702951,patients with sepsis caused by B. pseudomallei,MK09-712,Sepsis
+GSM1702952,patients with sepsis caused by B. pseudomallei,MK09-714,Sepsis
+GSM1702953,patients with sepsis caused by B. pseudomallei,MK09-732,Sepsis
+GSM1702954,patients with sepsis caused by other pathogens,MK10-1220,Sepsis
+GSM1702955,patients with sepsis caused by other pathogens,MK10-793,Sepsis
+GSM1702956,patients with sepsis caused by B. pseudomallei,MK10-799,Sepsis
+GSM1702957,patients with sepsis caused by other pathogens,MK10-811,Sepsis
+GSM1702958,patients with sepsis caused by other pathogens,MK10-812,Sepsis
+GSM1702959,patients with sepsis caused by other pathogens,MK10-854,Sepsis
+GSM1702960,patients with sepsis caused by B. pseudomallei,MK10-897,Sepsis
+GSM1702961,patients with sepsis caused by other pathogens,MK10-904,Sepsis
+GSM1702962,patients with sepsis caused by B. pseudomallei,MK11-1267,Sepsis
+GSM1702963,patients with sepsis caused by other pathogens,MK11-1272,Sepsis
+GSM1702964,patients with sepsis caused by other pathogens,MK11-1289,Sepsis
+GSM1702965,patients with sepsis caused by other pathogens,MK11-1294.1,Sepsis
+GSM1702966,patients with sepsis caused by other pathogens,MK11-1299,Sepsis
+GSM1702967,patients with sepsis caused by other pathogens,MK11-1303,Sepsis
+GSM1702968,patients with sepsis caused by other pathogens,MK11-1310,Sepsis
+GSM1702969,patients with sepsis caused by other pathogens,MK11-1342,Sepsis
+GSM1702970,patients with sepsis caused by other pathogens,MK11-1346,Sepsis
+GSM1702971,patients with sepsis caused by other pathogens,MK11-1348,Sepsis
+GSM1702972,patients with sepsis caused by other pathogens,MK11-1370,Sepsis
+GSM1702973,patients with sepsis caused by other pathogens,MK11-1373,Sepsis
+GSM1702974,patients with sepsis caused by other pathogens,MK11-1392,Sepsis
+GSM1702975,patients with sepsis caused by B. pseudomallei,MK11-1398,Sepsis
+GSM1702976,patients with sepsis caused by other pathogens,MK11-1400,Sepsis
+GSM1702977,patients with sepsis caused by other pathogens,MK11-1411,Sepsis
+GSM1702978,patients with sepsis caused by B. pseudomallei,MK11-1412,Sepsis
+GSM1702979,patients with sepsis caused by B. pseudomallei,MK11-1427,Sepsis
+GSM1702980,patients with sepsis caused by other pathogens,MK11-1436,Sepsis
+GSM1702981,patients with sepsis caused by other pathogens,MK11-1455,Sepsis
+GSM1702982,patients with sepsis caused by other pathogens,MK11-1463,Sepsis
+GSM1702983,patients with sepsis caused by other pathogens,MK11-1467,Sepsis
+GSM1702984,patients with sepsis caused by other pathogens,MK11-1476,Sepsis
+GSM1702985,patients with sepsis caused by other pathogens,MK11-1480,Sepsis
+GSM1702986,patients with sepsis caused by other pathogens,MK11-1482,Sepsis
+GSM1702987,patients with sepsis caused by other pathogens,MK11-1484,Sepsis
+GSM1702988,patients with sepsis caused by other pathogens,MK11-1496,Sepsis
+GSM1702989,patients with sepsis caused by other pathogens,MK11-1502,Sepsis
+GSM1702990,patients with sepsis caused by other pathogens,MK11-1514,Sepsis
+GSM1702991,patients with sepsis caused by B. pseudomallei,MK11-1524,Sepsis
+GSM1702992,patients with sepsis caused by other pathogens,MK11-1530,Sepsis
+GSM1702993,patients with sepsis caused by other pathogens,MK11-1533,Sepsis
+GSM1702994,patients with sepsis caused by B. pseudomallei,MK11-1540,Sepsis
+GSM1702995,patients with sepsis caused by other pathogens,MK11-1543,Sepsis
+GSM1702996,patients with sepsis caused by other pathogens,MK11-1545,Sepsis
+GSM1702997,patients with sepsis caused by other pathogens,MK11-1553,Sepsis
+GSM1702998,patients with sepsis caused by B. pseudomallei,MK11-1573,Sepsis
+GSM1702999,patients with sepsis caused by other pathogens,MK11-1574,Sepsis
+GSM1703000,patients with sepsis caused by other pathogens,MK11-1577,Sepsis
+GSM1703001,patients with sepsis caused by B. pseudomallei,MK11-1603,Sepsis
+GSM1703002,patients with sepsis caused by other pathogens,MK11-1604,Sepsis
+GSM1703003,patients with sepsis caused by other pathogens,MK11-1610,Sepsis
+GSM1703004,patients with sepsis caused by other pathogens,MK11-1626,Sepsis
+GSM1703005,patients with sepsis caused by B. pseudomallei,MK11-1628,Sepsis
+GSM1703006,patients with sepsis caused by other pathogens,MK11-1639,Sepsis
+GSM1703007,patients with sepsis caused by B. pseudomallei,MK11-1642,Sepsis
+GSM1703008,patients with sepsis caused by other pathogens,MK11-1649,Sepsis
+GSM1703009,patients with sepsis caused by other pathogens,MK11-1656,Sepsis
+GSM1703010,patients with sepsis caused by other pathogens,MK11-1657,Sepsis
+GSM1703011,patients with sepsis caused by other pathogens,MK11-1659,Sepsis
+GSM1703012,patients with sepsis caused by other pathogens,MK11-1661,Sepsis
+GSM1703013,patients with sepsis caused by other pathogens,MK11-1662,Sepsis
+GSM1703014,patients with sepsis caused by B. pseudomallei,SN10-0675,Sepsis
+GSM1703015,patients with sepsis caused by other pathogens,SN10-0686,Sepsis
+GSM1703016,patients with sepsis caused by B. pseudomallei,SN10-0747,Sepsis
+GSM1703017,patients with sepsis caused by other pathogens,SN10-0756,Sepsis
+GSM1703018,patients with sepsis caused by other pathogens,SN10-0761,Sepsis
+GSM1703019,patients with sepsis caused by other pathogens,SN10-0772,Sepsis
+GSM1703020,patients with sepsis caused by B. pseudomallei,SN10-0782,Sepsis
+GSM1703021,patients with sepsis caused by B. pseudomallei,SN10-0790,Sepsis
+GSM1703022,patients with sepsis caused by other pathogens,SN10-0821,Sepsis
+GSM1703023,patients with sepsis caused by B. pseudomallei,SN10-0868,Sepsis
+GSM1703024,patients with sepsis caused by B. pseudomallei,SN10-0917,Sepsis
+GSM1703025,patients with sepsis caused by other pathogens,SN10-0920,Sepsis

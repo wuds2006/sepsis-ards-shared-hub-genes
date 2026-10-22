@@ -1,0 +1,66 @@
+*********************************************************************
+* LD Score Regression (LDSC)
+* Version 1.0.1
+* (C) 2014-2019 Brendan Bulik-Sullivan and Hilary Finucane
+* Broad Institute of MIT and Harvard / MIT Department of Mathematics
+* GNU General Public License v3
+*********************************************************************
+Call: 
+./ldsc.py \
+--out ldsc_input/ards_sepsis_rg \
+--rg ldsc_input/ards_munged.sumstats.gz,ldsc_input/sepsis_munged.sumstats.gz \
+--ref-ld-chr ../00_rawdata/ld_ref/zenodo_ld/EUR/ALL_ensemble_1000G_hg38_EUR_chr@ \
+--w-ld-chr ../00_rawdata/ld_ref/zenodo_ld/EUR/ALL_ensemble_1000G_hg38_EUR_chr@ 
+
+Beginning analysis at Mon Aug 24 13:42:18 2026
+Reading summary statistics from ldsc_input/ards_munged.sumstats.gz ...
+Read summary statistics for 15778544 SNPs.
+Reading reference panel LD Score from ../00_rawdata/ld_ref/zenodo_ld/EUR/ALL_ensemble_1000G_hg38_EUR_chr[1-22] ... (ldscore_fromlist)
+Read reference panel LD Scores for 8668112 SNPs.
+Removing partitioned LD Scores with zero variance.
+Reading regression weight LD Score from ../00_rawdata/ld_ref/zenodo_ld/EUR/ALL_ensemble_1000G_hg38_EUR_chr[1-22] ... (ldscore_fromlist)
+Read regression weight LD Scores for 8668112 SNPs.
+After merging with reference panel LD, 6680385 SNPs remain.
+After merging with regression SNP LD, 6680385 SNPs remain.
+Computing rg for phenotype 2/2
+Reading summary statistics from ldsc_input/sepsis_munged.sumstats.gz ...
+Read summary statistics for 18699053 SNPs.
+Dropped 64344 SNPs with duplicated rs numbers.
+After merging with summary statistics, 6680385 SNPs remain.
+6574411 SNPs with valid alleles.
+
+Heritability of phenotype 1
+---------------------------
+Total Observed scale h2: 0.0019 (0.0007)
+Lambda GC: 1.0195
+Mean Chi^2: 1.0061
+Intercept: 0.988 (0.004)
+Ratio < 0 (usually indicates GC correction).
+
+Heritability of phenotype 2/2
+-----------------------------
+Total Observed scale h2: 0.0022 (0.0007)
+Lambda GC: 1.0315
+Mean Chi^2: 1.0368
+Intercept: 1.0156 (0.0033)
+Ratio: 0.4233 (0.0891)
+
+Genetic Covariance
+------------------
+Total Observed scale gencov: -0.0001 (0.0005)
+Mean z1*z2: 0.0005
+Intercept: 0.0022 (0.0024)
+
+Genetic Correlation
+-------------------
+Genetic Correlation: -0.0515 (0.245)
+Z-score: -0.2101
+P: 0.8336
+
+
+Summary of Genetic Correlation Results
+                                p1                                   p2      rg    se       z      p  h2_obs  h2_obs_se  h2_int  h2_int_se  gcov_int  gcov_int_se
+ldsc_input/ards_munged.sumstats.gz ldsc_input/sepsis_munged.sumstats.gz -0.0515 0.245 -0.2101 0.8336  0.0022     0.0007  1.0156     0.0033    0.0022       0.0024
+
+Analysis finished at Mon Aug 24 13:45:31 2026
+Total time elapsed: 3.0m:13.02000000000001s

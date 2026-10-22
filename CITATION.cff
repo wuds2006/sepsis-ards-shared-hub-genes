@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+title: "sepsis-ards-shared-hub-genes"
+message: "If you use this software, please cite it using these metadata."
+type: software
+authors:
+  - family-names: "<SURNAME>"          # [AUTHOR_INPUT_NEEDED]
+    given-names: "<GIVEN NAMES>"       # [AUTHOR_INPUT_NEEDED]
+    orcid: "https://orcid.org/0000-0000-0000-0000"  # [AUTHOR_INPUT_NEEDED]
+version: 1.0.0
+date-released: "2026-10-22"            # set to the actual release date
+license: MIT
+repository-code: "https://github.com/wuds2006/sepsis-ards-shared-hub-genes"  # [AUTHOR_INPUT_NEEDED]
+url: "https://github.com/wuds2006/sepsis-ards-shared-hub-genes"              # [AUTHOR_INPUT_NEEDED]
+abstract: "Analysis code and derived results for the shared hub-gene and immune-signature study of sepsis and ARDS."
+keywords:
+  - sepsis
+  - ARDS
+  - transcriptomics
+  - machine-learning
+  - Mendelian-randomization
+  - single-cell

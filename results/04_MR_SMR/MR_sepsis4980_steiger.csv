@@ -1,0 +1,2 @@
+"id.exposure","id.outcome","exposure","outcome","snp_r2.exposure","snp_r2.outcome","correct_causal_direction","steiger_pval"
+"ieu-b-4980","J10_ARDS","Sepsis_UKB","ARDS",0.00093496172331439,3.1363613497681e-05,TRUE,2.64799636993144e-34

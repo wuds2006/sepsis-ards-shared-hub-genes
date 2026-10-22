@@ -1,0 +1,5 @@
+"cohort","n_up","up","n_down","down"
+"GSE76293",3,"Plasma;M2_Macro;MDSC",6,"CD8_T;CD4_T;B_cell;DC;Mast;Eosinophil"
+"GSE69528",5,"Monocyte;M1_Macro;M2_Macro;Neutrophil;MDSC",10,"CD8_T;CD4_T;Treg;Th1;Th2;NK;B_cell;DC;Mast;Eosinophil"
+"GSE243066",4,"Plasma;Monocyte;M2_Macro;Neutrophil",11,"CD8_T;CD4_T;Treg;Th1;Th2;Th17;NK;B_cell;DC;Mast;Eosinophil"
+"GSE100159",5,"Monocyte;M1_Macro;M2_Macro;Neutrophil;MDSC",10,"CD8_T;CD4_T;Treg;Th1;Th2;NK;B_cell;DC;Mast;Eosinophil"

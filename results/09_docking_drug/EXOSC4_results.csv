@@ -1,0 +1,11 @@
+gene,ligand,affinity,site
+EXOSC4,EGCG,-7.591,centroid
+EXOSC4,quercetin,-7.044,centroid
+EXOSC4,tetrahydroalstonine,-7.393,centroid
+EXOSC4,resveratrol,-6.594,centroid
+EXOSC4,curcumin,-6.274,centroid
+EXOSC4,baicalein,-6.622,centroid
+EXOSC4,luteolin,-7.368,centroid
+EXOSC4,kaempferol,-6.867,centroid
+EXOSC4,berberine,-7.112,centroid
+EXOSC4,emodin,-6.678,centroid

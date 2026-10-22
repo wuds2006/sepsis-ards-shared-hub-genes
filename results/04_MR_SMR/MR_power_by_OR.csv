@@ -1,0 +1,9 @@
+"direction","OR","power_fixed","power_simulated","power_as_reported_SE"
+"forward_sepsis_to_ARDS",1.1,0.051,0.061,0.051
+"forward_sepsis_to_ARDS",1.2,0.091,0.097,0.091
+"forward_sepsis_to_ARDS",1.5,0.285,0.285,0.285
+"forward_sepsis_to_ARDS",2,0.662,0.668,0.662
+"reverse_ARDS_to_sepsis",1.1,1,1,1
+"reverse_ARDS_to_sepsis",1.2,1,1,1
+"reverse_ARDS_to_sepsis",1.5,1,1,1
+"reverse_ARDS_to_sepsis",2,1,1,1

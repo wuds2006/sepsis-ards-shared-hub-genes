@@ -1,0 +1,3 @@
+"id.exposure","id.outcome","outcome","exposure","method","Q","Q_df","Q_pval"
+"ieu-b-4980","J10_ARDS","ARDS","Sepsis_UKB","MR Egger",13.7836680361233,16,0.614826343931615
+"ieu-b-4980","J10_ARDS","ARDS","Sepsis_UKB","Inverse variance weighted",13.7871409582106,17,0.68210797670666

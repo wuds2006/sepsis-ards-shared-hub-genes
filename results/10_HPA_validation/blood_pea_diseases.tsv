@@ -1,0 +1,61 @@
+Disease	Class
+Multiple sclerosis	Autoimmune
+Myositis	Autoimmune
+Rheumatoid arthritis	Autoimmune
+Sjögrens syndrome	Autoimmune
+Systemic lupus erythematosus	Autoimmune
+Systemic sclerosis	Autoimmune
+Acute myeloid leukemia	Cancer
+Breast cancer	Cancer
+Breast ductal carcinoma in situ	Cancer
+Cervical cancer	Cancer
+Chronic lymphocytic leukemia	Cancer
+Colorectal cancer	Cancer
+Diffuse large B-cell lymphoma	Cancer
+Endometrial cancer	Cancer
+Glioma	Cancer
+Hepatocellular cancer	Cancer
+Lung cancer	Cancer
+Metastatic melanoma	Cancer
+Meningioma	Cancer
+Myeloma	Cancer
+Ovarian cancer	Cancer
+Pancreatic cancer	Cancer
+Pituitary neuroendocrine tumor	Cancer
+Prostate cancer	Cancer
+Small intestine neuroendocrine tumor	Cancer
+Abdominal aortic aneurysm	Cardiovascular
+Acute coronary syndrome	Cardiovascular
+Acute venous thromboembolism	Cardiovascular
+Coronary artery calcification	Cardiovascular
+Previous venous thromboembolism	Cardiovascular
+Healthy	Healthy
+Bacterial gastroenteritis	Infection
+Dengue fever	Infection
+E.coli pyelonephritis	Infection
+HIV	Infection
+Influenza	Infection
+Malaria	Infection
+Mycoplasma pneumonia	Infection
+Pneumococcal pneumonia	Infection
+Staphylococcus aureus bacteremia	Infection
+Streptococcal soft tissue infection	Infection
+Alcohol-related liver disease	Metabolic
+Chronic liver disease	Metabolic
+MASLD	Metabolic
+Metabolic syndrome	Metabolic
+Obesity	Metabolic
+Type 2 diabetes	Metabolic
+Viral hepatitis related cirrhosis	Metabolic
+Pediatric bone tumor	Pediatric
+Pediatric CNS tumor	Pediatric
+Pediatric diffuse astrocytic and oligodendro. tumor	Pediatric
+Pediatric kidney tumor	Pediatric
+Pediatric long COVID	Pediatric
+Pediatric lymphoma	Pediatric
+Pediatric neuroblastoma	Pediatric
+Pediatric retinoblastoma	Pediatric
+Pediatric sarcoma	Pediatric
+Pediatric systemic inflammatory disease	Pediatric
+Bipolar disorder	Psychiatric
+Schizophrenia	Psychiatric

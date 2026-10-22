@@ -1,0 +1,67 @@
+donor,group,value,dataset,n_cells,metric,celltype,pathway
+1,Sepsis,11.13794583499525,GSE151263,1998.0,pseudotime,,
+2,Sepsis,3.735043181395215,GSE151263,2000.0,pseudotime,,
+3,Sepsis,10.5811347019212,GSE151263,1998.0,pseudotime,,
+4,Sepsis,3.0333989472007303,GSE151263,2000.0,pseudotime,,
+5,ARDS,3.73108100664906,GSE151263,2000.0,pseudotime,,
+6,ARDS,7.852653327671215,GSE151263,2000.0,pseudotime,,
+7,ARDS,9.356858823080806,GSE151263,2000.0,pseudotime,,
+HC1,HC,3.059450683056495,GSE167363,2474.0,pseudotime,,
+HC2,HC,1.77523895342879,GSE167363,2472.0,pseudotime,,
+S2,Sepsis,5.145783001689139,GSE167363,4940.0,pseudotime,,
+S3,Sepsis,1.73590557558051,GSE167363,2473.0,pseudotime,,
+1,Sepsis,0.7609832338732595,GSE151263,264.0,UPP1_program,Mono,
+2,Sepsis,0.7424552429667519,GSE151263,834.0,UPP1_program,Mono,
+3,Sepsis,0.577701998673866,GSE151263,201.0,UPP1_program,Mono,
+4,Sepsis,0.687505920242493,GSE151263,1115.0,UPP1_program,Mono,
+5,ARDS,0.5397840295538505,GSE151263,468.0,UPP1_program,Mono,
+6,ARDS,0.6723690442360519,GSE151263,524.0,UPP1_program,Mono,
+7,ARDS,0.6862934545798995,GSE151263,644.0,UPP1_program,Mono,
+HC1,HC,0.138339678251259,GSE167363,2474.0,UPP1_program,all_mono,
+HC2,HC,0.149320479757665,GSE167363,2472.0,UPP1_program,all_mono,
+S2,Sepsis,0.10926562691882599,GSE167363,4940.0,UPP1_program,all_mono,
+S3,Sepsis,0.702648491546932,GSE167363,2473.0,UPP1_program,all_mono,
+ARDS1,ARDS,0.05565105630986706,GSE151263,,metabolism,,Glycolysis
+ARDS2,ARDS,0.03721409656244547,GSE151263,,metabolism,,Glycolysis
+ARDS3,ARDS,0.05273015970457774,GSE151263,,metabolism,,Glycolysis
+Sepsis1,Sepsis,0.0503315905855389,GSE151263,,metabolism,,Glycolysis
+Sepsis2,Sepsis,0.0591024879056354,GSE151263,,metabolism,,Glycolysis
+Sepsis3,Sepsis,0.06381738523982036,GSE151263,,metabolism,,Glycolysis
+Sepsis4,Sepsis,0.06935291728722506,GSE151263,,metabolism,,Glycolysis
+ARDS1,ARDS,0.2053203554135103,GSE151263,,metabolism,,Oxidative phosphorylation
+ARDS2,ARDS,0.11943836906917413,GSE151263,,metabolism,,Oxidative phosphorylation
+ARDS3,ARDS,0.1677086350686681,GSE151263,,metabolism,,Oxidative phosphorylation
+Sepsis1,Sepsis,0.13611228318228813,GSE151263,,metabolism,,Oxidative phosphorylation
+Sepsis2,Sepsis,0.18524985628620044,GSE151263,,metabolism,,Oxidative phosphorylation
+Sepsis3,Sepsis,0.22997236752582154,GSE151263,,metabolism,,Oxidative phosphorylation
+Sepsis4,Sepsis,0.19347025140612908,GSE151263,,metabolism,,Oxidative phosphorylation
+ARDS1,ARDS,0.08562750583699003,GSE151263,,metabolism,,Fatty acid metabolism
+ARDS2,ARDS,0.06697197989762044,GSE151263,,metabolism,,Fatty acid metabolism
+ARDS3,ARDS,0.07754672303088848,GSE151263,,metabolism,,Fatty acid metabolism
+Sepsis1,Sepsis,0.0727057690394526,GSE151263,,metabolism,,Fatty acid metabolism
+Sepsis2,Sepsis,0.10247345425286501,GSE151263,,metabolism,,Fatty acid metabolism
+Sepsis3,Sepsis,0.09339636270674274,GSE151263,,metabolism,,Fatty acid metabolism
+Sepsis4,Sepsis,0.09326911476456112,GSE151263,,metabolism,,Fatty acid metabolism
+ARDS1,ARDS,0.007025140457762015,GSE151263,,metabolism,,Xenobiotic metabolism
+ARDS2,ARDS,0.01640736173022851,GSE151263,,metabolism,,Xenobiotic metabolism
+ARDS3,ARDS,0.021957132345094162,GSE151263,,metabolism,,Xenobiotic metabolism
+Sepsis1,Sepsis,0.014431122927762219,GSE151263,,metabolism,,Xenobiotic metabolism
+Sepsis2,Sepsis,0.041916208279460264,GSE151263,,metabolism,,Xenobiotic metabolism
+Sepsis3,Sepsis,0.0027319768735446794,GSE151263,,metabolism,,Xenobiotic metabolism
+Sepsis4,Sepsis,0.04119805203179167,GSE151263,,metabolism,,Xenobiotic metabolism
+HC1,HC,0.03281186487876816,GSE167363,,metabolism,,Glycolysis
+HC2,HC,0.038151906417589095,GSE167363,,metabolism,,Glycolysis
+S2,Sepsis,0.046711022116885825,GSE167363,,metabolism,,Glycolysis
+S3,Sepsis,0.06400435401685303,GSE167363,,metabolism,,Glycolysis
+HC1,HC,0.20196906283833535,GSE167363,,metabolism,,Oxidative phosphorylation
+HC2,HC,0.19579468034609335,GSE167363,,metabolism,,Oxidative phosphorylation
+S2,Sepsis,0.18784406270408605,GSE167363,,metabolism,,Oxidative phosphorylation
+S3,Sepsis,0.3216433024625658,GSE167363,,metabolism,,Oxidative phosphorylation
+HC1,HC,0.041667528426542075,GSE167363,,metabolism,,Fatty acid metabolism
+HC2,HC,0.057935390539877965,GSE167363,,metabolism,,Fatty acid metabolism
+S2,Sepsis,0.04919899586052424,GSE167363,,metabolism,,Fatty acid metabolism
+S3,Sepsis,0.09996801264496233,GSE167363,,metabolism,,Fatty acid metabolism
+HC1,HC,-0.00906869226457802,GSE167363,,metabolism,,Xenobiotic metabolism
+HC2,HC,-0.004237019690429588,GSE167363,,metabolism,,Xenobiotic metabolism
+S2,Sepsis,0.0008154795548979973,GSE167363,,metabolism,,Xenobiotic metabolism
+S3,Sepsis,0.04576159614537697,GSE167363,,metabolism,,Xenobiotic metabolism

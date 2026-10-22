@@ -1,0 +1,25 @@
+MR (Sepsis ieu-b-4980 暴露 -> ARDS J10_ARDS 结局) 重跑结果
+数据源:
+- 暴露: Hamilton FW 2021 sepsis GWAS (UK Biobank, 11,643 cases / 474,841 controls)
+  IEU ID ieu-b-4980 = GWAS Catalog GCST90281174 (GRCh37), Regenie
+- 结局: FinnGen R11 J10_ARDS (431 cases / 493,301 controls, GRCh38)
+- 匹配: rsID (跨参考基因组), 暴露无全基因组显著位点 -> 工具变量阈值 p<5e-6
+
+工具变量: 37 -> 对齐30 -> 距离clumping(1Mb) 19 -> harmonise 18
+- F 统计量: 均值 22.8, 最小 21 (>10, 工具强度足够)
+
+MR 结果:
+- IVW: b=-0.336, se=0.292, p=0.249 (不显著)
+- MR-Egger: b=-0.362, se=0.531, p=0.505 (不显著)
+- Weighted median: b=-0.335, p=0.392 (不显著)
+- Weighted mode: b=-0.220, p=0.666 (不显著)
+
+敏感性:
+- 异质性 (IVW Cochran Q): Q=13.79, p=0.682 (无异质性)
+- 多效性 (Egger intercept): 0.0035, p=0.954 (无多效性)
+- Steiger 方向性: correct_causal_direction=TRUE, p=2.65e-34 (方向正确)
+
+结论: 未发现 UKB sepsis 对 ARDS 的显著因果效应(IVW p=0.249)。
+      Steiger 确认因果方向为 sepsis->ARDS。结果比之前 FinnGen 细菌感染代理更可靠
+      (UKB vs FinnGen 样本重叠极小)。
+局限: 脓毒症无全基因组显著位点, 工具变量阈值放宽至 p<5e-6(37个)。

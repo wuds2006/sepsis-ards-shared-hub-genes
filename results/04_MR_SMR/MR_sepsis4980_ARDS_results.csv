@@ -1,0 +1,5 @@
+"id.exposure","id.outcome","outcome","exposure","method","nsnp","b","se","pval"
+"ieu-b-4980","J10_ARDS","ARDS","Sepsis_UKB(ieu-b-4980)","Inverse variance weighted",18,-0.335867750375998,0.291605475649348,0.249408111669707
+"ieu-b-4980","J10_ARDS","ARDS","Sepsis_UKB(ieu-b-4980)","MR Egger",18,-0.362023977458989,0.531063774775248,0.505180025172407
+"ieu-b-4980","J10_ARDS","ARDS","Sepsis_UKB(ieu-b-4980)","Weighted median",18,-0.335212189048831,0.391315074707308,0.391649461823685
+"ieu-b-4980","J10_ARDS","ARDS","Sepsis_UKB(ieu-b-4980)","Weighted mode",18,-0.22019378059267,0.500838315922511,0.665728228496195

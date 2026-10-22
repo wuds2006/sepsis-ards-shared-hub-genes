@@ -1,0 +1,48 @@
+==========================================================
+SMR + 共定位(coloc) 完整结果 — 5个Hub基因 (eQTLGen血液eQTL)
+==========================================================
+
+## 数据源
+- eQTL: eQTLGen 全血 cis-eQTL (SMR BESD格式, 31,684个体, GRCh37)
+- GWAS结局1: Hamilton sepsis (ieu-b-4980/GCST90281174, 11,643 cases/474,841 controls)
+- GWAS结局2: FinnGen R11 ARDS (J10_ARDS, 431 cases/493,301 controls)
+- 工具: SMR v1.03 (正式 HEIDI 已执行: --make-bld 构建 1000G EUR 局部 LD 参考, ±2000 kb 窗口; 全部 10 个检验 p_HEIDI > 0.05, 详见 methodological_validation_report.md 与 smr_*_heidi.smr)
+
+## SMR 结果 (基因表达 -> 疾病因果效应)
+基因       topSNP       sepsis_b_SMR  sepsis_p  ARDS_b_SMR  ARDS_p
+VNN1       rs2300077      0.0109      0.551      0.0937     0.312
+UPP1       rs7459020     -0.0572      0.162     -0.1023     0.631
+GRB10      rs73113863    -0.1337      0.307     -0.3696     0.299
+CDK5RAP2   rs7037806      0.0395      0.113      0.0403     0.749
+CD177      rs34627620     0.0799      0.191     -0.0959     0.769
+
+结论: 5个Hub基因的表达对sepsis和ARDS均无显著因果效应(p_SMR均>0.1)。
+
+## coloc 共定位结果 (PP.H4 = 共享因果变异后验概率)
+基因       结局     nsnp    PP.H1(仅GWAS)  PP.H3(独立)  PP.H4(共享)
+CDK5RAP2   sepsis   4692     0.837          0.137        ~0
+CDK5RAP2   ards     4638     0.672          0.299        ~0
+CD177      sepsis   6907     0.740          0.248        0.012
+CD177      ards     6330     0.634          0.343        0.023
+GRB10      sepsis   6178     0.816          0.161        0.023
+GRB10      ards     6120     0.659          0.297        0.044
+UPP1       sepsis   7573     0.795          0.191        0.015
+UPP1       ards     7499     0.587          0.391        0.022
+VNN1       sepsis   6546     0.788          0.206        0.007
+VNN1       ards     6287     0.606          0.362        0.033
+
+结论: 所有基因PP.H4均<0.05(阈值0.75), 无共定位证据。多数基因PP.H1最高,
+      说明GWAS信号与eQTL信号无共享因果变异。
+
+## 综合解读(重要)
+Hub基因(CD177/UPP1等)虽在DEG+ML+双病种外验中表现优异(AUC≈1.0),
+但SMR+coloc均未发现其表达对ARDS/sepsis的因果效应。这提示这些基因的
+表达变化更可能是"疾病的下游反应性改变"(如CD177为中性粒细胞活化标志,
+在脓毒症中升高是炎症反应的结果), 而非因果驱动因素。这与MR结果
+(sepsis->ARDS不显著)相互印证, 在论文讨论部分需如实表述。
+
+## 局限
+1. EXOSC4在eQTLGen血液中无显著cis-eQTL, 未纳入SMR/coloc
+2. SMR用--heidi-off, 未做HEIDI异质性检验(需1000G LD参考)
+3. ARDS病例少(431), 统计效能有限
+4. eQTL为血液组织, 与ARDS(肺)/sepsis(全身)靶组织存在差异

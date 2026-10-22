@@ -1,0 +1,5 @@
+"model","genes","train_auc","valid_auc","valid_lo","valid_hi"
+"ARDS 6-gene (final)",6,1,0.984,0.953,1
+"ARDS 7-gene (incl MUC1)",7,1,0.984,0.953,1
+"Sepsis 6-gene (final)",6,0.993,0.708,0.563,0.854
+"Sepsis 7-gene (incl MUC1)",7,0.996,0.699,0.548,0.851

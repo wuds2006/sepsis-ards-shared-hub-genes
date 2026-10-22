@@ -1,0 +1,31 @@
+dimension,item,GSE151263_PBMC,GSE167363_CD14,note
+Hub expression pct,CDK5RAP2,0.0224,0.0577,fraction of cells with expression
+Hub expression pct,CD177,0.0000,0.0041,fraction of cells with expression
+Hub expression pct,GRB10,0.0053,0.0063,fraction of cells with expression
+Hub expression pct,UPP1,0.3795,0.4271,fraction of cells with expression
+Hub expression pct,EXOSC4,0.0477,0.0303,fraction of cells with expression
+Hub expression pct,VNN1,0.0098,0.0106,fraction of cells with expression
+Pseudotime rho (slingshot),CDK5RAP2,0.009,0.031,Spearman vs pseudotime
+Pseudotime rho (slingshot),CD177,NA,-0.045,Spearman vs pseudotime
+Pseudotime rho (slingshot),GRB10,0.046,-0.061,Spearman vs pseudotime
+Pseudotime rho (slingshot),UPP1,-0.325,-0.519,Spearman vs pseudotime
+Pseudotime rho (slingshot),EXOSC4,-0.001,-0.101,Spearman vs pseudotime
+Pseudotime rho (slingshot),VNN1,0.088,-0.080,Spearman vs pseudotime
+AUCell log2FC,CDK5RAP2,0.374,0.390,PBMC: Sepsis/ARDS; CD14+: Sepsis/HC
+AUCell log2FC,CD177,-0.418,0.311,PBMC: Sepsis/ARDS; CD14+: Sepsis/HC
+AUCell log2FC,GRB10,0.006,-0.004,PBMC: Sepsis/ARDS; CD14+: Sepsis/HC
+AUCell log2FC,UPP1,0.040,0.154,PBMC: Sepsis/ARDS; CD14+: Sepsis/HC
+AUCell log2FC,EXOSC4,0.201,-0.094,PBMC: Sepsis/ARDS; CD14+: Sepsis/HC
+AUCell log2FC,VNN1,0.052,0.493,PBMC: Sepsis/ARDS; CD14+: Sepsis/HC
+scTenifoldKnk significant targets,UPP1,1,2,genes with p.adj < 0.05
+scTenifoldKnk significant targets,EXOSC4,2,1,genes with p.adj < 0.05
+scTenifoldKnk significant targets,CDK5RAP2,not feasible,1,genes with p.adj < 0.05
+scTenifoldKnk significant targets,VNN1,not feasible,32,genes with p.adj < 0.05
+KO logFC concordance,UPP1,n = 1175,"r = 0.469, P = 3.72e-65",PBMC vs CD14+ Pearson
+KO logFC concordance,EXOSC4,n = 1183,"r = 0.131, P = 6.01e-06",PBMC vs CD14+ Pearson
+CellOracle ΔUPP1 (TF KD),CEBPB,-0.506,-0.912,simulated delta
+CellOracle ΔUPP1 (TF KD),ETS2,-0.373,-0.762,simulated delta
+CellChat L-R pairs,ARDS,248,-,PBMC
+CellChat L-R pairs,Sepsis(PBMC),278,-,PBMC
+CellChat L-R pairs,HC,-,454,CD14+
+CellChat L-R pairs,Sepsis(CD14+),-,638,CD14+

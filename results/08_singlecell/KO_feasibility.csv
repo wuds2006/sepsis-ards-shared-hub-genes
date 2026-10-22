@@ -1,0 +1,7 @@
+"gene","pct_expressing","knockable","n_sig_FDR05","note"
+"CDK5RAP2",0.0577,TRUE,1,"minPCT 0.05"
+"CD177",0.0041,FALSE,NA,"表达过低, 不可敲除"
+"GRB10",0.0063,FALSE,NA,"表达过低, 不可敲除"
+"UPP1",0.4271,TRUE,2,"minPCT 0.05"
+"EXOSC4",0.0303,TRUE,1,"下调 minPCT 至 0.01"
+"VNN1",0.0106,TRUE,32,"下调 minPCT 至 0.005"

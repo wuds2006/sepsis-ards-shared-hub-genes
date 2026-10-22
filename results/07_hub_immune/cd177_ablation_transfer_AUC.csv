@@ -1,0 +1,3 @@
+"model","n_genes","train_AUC","transfer_AUC_GSE243066"
+"six-gene (with CD177)",6,1,0.9843
+"five-gene (CD177 removed)",5,1,0.9608

@@ -1,0 +1,11 @@
+dataset,role,platform,tissue_or_cell_type,disease,cases,controls,total,ancestry,sampling_time_point,notes
+GSE76293,Discovery (ARDS),"GPL570, Affymetrix HG-U133 Plus 2.0",Peripheral-blood polymorphonuclear neutrophils,ARDS,12,12,24,[AUTHOR_INPUT_NEEDED]: ancestry,[AUTHOR_INPUT_NEEDED]: sampling time point,70 in-vitro cultured samples removed before analysis
+GSE69528,Discovery (sepsis),"GPL10558, Illumina HumanHT-12 v4",Whole blood,Sepsis,83,28,111,[AUTHOR_INPUT_NEEDED]: ancestry,[AUTHOR_INPUT_NEEDED]: sampling time point,27 non-infected type 2 diabetes samples removed before analysis
+GSE100159,External validation,"GPL6884, Illumina HumanWG-6 v3.0",Whole blood,Sepsis,33,12,45,[AUTHOR_INPUT_NEEDED]: ancestry,[AUTHOR_INPUT_NEEDED]: sampling time point,
+GSE243066,External validation,"GPL30209, Illumina NovaSeq 6000 (RNA-seq)",Peripheral-blood mononuclear cells,ARDS,34,15,49,[AUTHOR_INPUT_NEEDED]: ancestry,[AUTHOR_INPUT_NEEDED]: sampling time point,
+GSE65682,Prognostic (septic shock),"GPL570, Affymetrix HG-U133 Plus 2.0",Whole blood,Septic shock,479,0,479,European (as reported by the original study; [AUTHOR_INPUT_NEEDED]: confirm),At intensive care unit admission,"28-day mortality, 114 deaths; Mars1-Mars4 transcriptomic endotypes"
+GSE151263,Single cell,10x Genomics,Peripheral-blood mononuclear cells,ARDS and sepsis,3 ARDS + 4 sepsis donors,0,"13,996 cells",[AUTHOR_INPUT_NEEDED]: ancestry,[AUTHOR_INPUT_NEEDED]: sampling time point,Disease-versus-disease contrast at the patient level (n=7)
+GSE167363,Single cell,10x Genomics,Peripheral-blood CD14+ monocytes,Sepsis,2 sepsis donors,2 healthy donors,"12,359 cells",[AUTHOR_INPUT_NEEDED]: ancestry,[AUTHOR_INPUT_NEEDED]: sampling time point,One donor sampled twice
+ieu-b-4980 (IEU OpenGWAS; GWAS Catalog GCST90281174),Mendelian randomization,GWAS summary statistics,Germline,Sepsis,NA,NA,NA,European,NA,Exposure for the forward MR analysis
+FinnGen R11,Mendelian randomization,GWAS summary statistics,Germline,ARDS,NA,NA,NA,European,NA,Outcome for the forward MR analysis
+eQTLGen,SMR-HEIDI reference,Blood cis-eQTL summary statistics,Whole blood,NA,NA,NA,NA,European,NA,*EXOSC4* has no usable cis-eQTL in this reference

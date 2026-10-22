@@ -1,0 +1,3 @@
+"pair","genes_used","transfer_AUC_original","transfer_AUC_combat"
+"ARDS (GSE76293->GSE243066)",19821,0.984,0.978
+"Sepsis (GSE69528->GSE100159)",9771,0.708,0.977
