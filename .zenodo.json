@@ -1,0 +1,21 @@
+{
+  "upload_type": "software",
+  "access_right": "open",
+  "license": "MIT",
+  "title": "sepsis-ards-shared-hub-genes",
+  "creators": [
+    {
+      "name": "Wu, Dansen",
+      "orcid": "0000-0002-8429-168X"
+    }
+  ],
+  "description": "Analysis code and derived results for the shared hub-gene and immune-signature study of sepsis and ARDS (Supplementary Methods S1-S14).",
+  "keywords": [
+    "sepsis",
+    "ARDS",
+    "transcriptomics",
+    "machine-learning",
+    "Mendelian-randomization",
+    "single-cell"
+  ]
+}
