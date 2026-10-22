@@ -3,9 +3,9 @@ title: "sepsis-ards-shared-hub-genes"
 message: "If you use this software, please cite it using these metadata."
 type: software
 authors:
-  - family-names: "<SURNAME>"          # [AUTHOR_INPUT_NEEDED]
-    given-names: "<GIVEN NAMES>"       # [AUTHOR_INPUT_NEEDED]
-    orcid: "https://orcid.org/0000-0000-0000-0000"  # [AUTHOR_INPUT_NEEDED]
+  - family-names: "Wu"
+    given-names: "Dansen"
+    orcid: "https://orcid.org/0000-0002-8429-168X"
 version: 1.0.0
 date-released: "2026-10-22"            # set to the actual release date
 license: MIT
