@@ -1,0 +1,11 @@
+gene,ligand,affinity,site
+GRB10,EGCG,-9.612,centroid
+GRB10,quercetin,-8.414,centroid
+GRB10,tetrahydroalstonine,-9.52,centroid
+GRB10,resveratrol,-7.129,centroid
+GRB10,curcumin,-8.286,centroid
+GRB10,baicalein,-8.034,centroid
+GRB10,luteolin,-8.3,centroid
+GRB10,kaempferol,-8.18,centroid
+GRB10,berberine,-8.408,centroid
+GRB10,emodin,-8.405,centroid

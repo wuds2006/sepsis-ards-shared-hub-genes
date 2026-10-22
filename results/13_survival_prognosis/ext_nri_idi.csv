@@ -1,0 +1,3 @@
+"comparison","NRI","NRI_P","IDI","cutoff","n_case","n_ctrl"
+"Clinical + Hub6 vs Clinical",0.044,0.373,0.0203,0.239,114,363
+"Clinical + LASSO-179 vs Clinical",0.132,0.0261,0.0941,0.239,114,363

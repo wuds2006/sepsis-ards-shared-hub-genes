@@ -1,0 +1,10 @@
+type,residue,distance,side,detail
+hydrogen bond,GLU164,2.87,ligand donor,
+hydrogen bond,LYS157,2.9,ligand acceptor,
+hydrogen bond,MET218,3.42,ligand acceptor,
+hydrogen bond,GLU164,2.87,ligand acceptor,
+hydrophobic,TRP64,3.12,,
+hydrophobic,PHE161,3.72,,
+hydrophobic,PHE191,3.38,,
+pi-stacking,TRP217,4.57,P,
+pi-stacking,PHE161,3.87,P,

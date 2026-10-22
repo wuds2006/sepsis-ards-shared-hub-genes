@@ -1,0 +1,11 @@
+gene,ligand,affinity,site
+VNN1,EGCG,-7.527,cocrystal
+VNN1,quercetin,-9.842,cocrystal
+VNN1,tetrahydroalstonine,-8.673,cocrystal
+VNN1,resveratrol,-9.4,cocrystal
+VNN1,curcumin,-9.175,cocrystal
+VNN1,baicalein,-9.832,cocrystal
+VNN1,luteolin,-10.01,cocrystal
+VNN1,kaempferol,-9.568,cocrystal
+VNN1,berberine,-6.616,cocrystal
+VNN1,emodin,-7.703,cocrystal

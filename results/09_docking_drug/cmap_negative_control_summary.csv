@@ -1,0 +1,8 @@
+background,library,n_sets,gluco_top10_freq_pct,n_with_any_gluco_hit
+real,Old_CMAP_up,1,100.0,1
+real,Old_CMAP_down,1,0.0,1
+A_nonhub_candidates,Old_CMAP_up,100,17.0,87
+A_nonhub_candidates,Old_CMAP_down,100,5.0,59
+B_measured_universe,Old_CMAP_up,100,0.0,0
+B_measured_universe,Old_CMAP_down,100,0.0,0
+background_C_DEG_matched,Old_CMAP_up,2,18

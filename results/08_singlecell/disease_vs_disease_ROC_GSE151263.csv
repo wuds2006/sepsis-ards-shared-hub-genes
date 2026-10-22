@@ -1,0 +1,8 @@
+gene,type,AUC_ARDSvsSepsis,P_exact
+CDK5RAP2,single,0.417,0.857
+CD177,single,0.5,1.0
+GRB10,single,0.667,0.629
+UPP1,single,0.333,0.629
+EXOSC4,single,0.333,0.629
+VNN1,single,0.75,0.4
+Combined_signature,signature,0.5,1.0

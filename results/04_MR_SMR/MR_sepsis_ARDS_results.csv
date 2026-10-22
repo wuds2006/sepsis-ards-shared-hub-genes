@@ -1,0 +1,5 @@
+"id.exposure","id.outcome","outcome","exposure","method","nsnp","b","se","pval"
+"AB1_OTHER_BACTERIAL","J10_ARDS","ARDS","Bacterial_infection(sepsis_proxy)","Inverse variance weighted",9,-0.305794103978878,0.671989446109737,0.649067587057237
+"AB1_OTHER_BACTERIAL","J10_ARDS","ARDS","Bacterial_infection(sepsis_proxy)","MR Egger",9,-0.646104788980374,1.35130929028512,0.647127161216971
+"AB1_OTHER_BACTERIAL","J10_ARDS","ARDS","Bacterial_infection(sepsis_proxy)","Weighted median",9,-0.465971769126051,0.917749662955926,0.611640617956821
+"AB1_OTHER_BACTERIAL","J10_ARDS","ARDS","Bacterial_infection(sepsis_proxy)","Weighted mode",9,-0.695038490408519,1.53133983032961,0.661977827555168

@@ -1,0 +1,3 @@
+cohort,n_case,n_ctrl,exact_lower_bound_AUC
+GSE243066 ARDS validation (combined signature),34,15,0.9941
+GSE100159 sepsis validation (combined signature),33,12,0.9925

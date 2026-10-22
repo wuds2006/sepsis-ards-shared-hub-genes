@@ -1,0 +1,3 @@
+"direction","n_IV","F_mean","F_median","F_min","F_max","total_R2","IVW_SE_logOR_fixed","IVW_SE_logOR_multiplicative","min_detectable_OR_80power_fixed","min_detectable_OR_80power_as_reported"
+"forward_sepsis_to_ARDS",18,22.7,22,21,26.5,0.040529,0.2916,0.2916,2.26,2.26
+"reverse_ARDS_to_sepsis",7,21.8,21.8,21.2,22.9,0.349255,0.0102,0.014,1.03,1.04

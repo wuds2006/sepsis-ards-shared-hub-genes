@@ -1,0 +1,20 @@
+Immune cell	Lineage
+basophil	granulocytes
+classical monocyte	monocytes
+eosinophil	granulocytes
+gdT-cell	T-cells
+intermediate monocyte	monocytes
+MAIT T-cell	T-cells
+memory B-cell	B-cells
+memory CD4 T-cell	T-cells
+memory CD8 T-cell	T-cells
+myeloid DC	dendritic cells
+naive B-cell	B-cells
+naive CD4 T-cell	T-cells
+naive CD8 T-cell	T-cells
+neutrophil	granulocytes
+NK-cell	NK-cells
+non-classical monocyte	monocytes
+plasmacytoid DC	dendritic cells
+T-reg	T-cells
+total PBMC	total PBMC

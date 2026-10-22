@@ -1,0 +1,7 @@
+gene,ensembl,approved_name,subcellular_locations,tractable_buckets,n_tractable_buckets,n_known_drugs,max_clinical_phase,top_known_drugs
+CDK5RAP2,ENSG00000136861,CDK5 regulatory subunit associated protein 2,"Basal body; Cell Junctions; Centrosome; Cytoplasm; Cytoplasm, cytoskeleton; Cytoplasm, cytoskeleton, microtubule organizing center, centrosome",Structure with Ligand; Database Ubiquitination; Half-life Data,3,0,none,
+CD177,ENSG00000204936,CD177 molecule,"Cell membrane ; Lipid-anchor, GPI-anchor; Cell projection, lamellipodium; Cytoplasmic granule membrane; Membrane raft ; Lipid-anchor, GPI-like-anchor; Secreted",UniProt loc high conf; GO CC high conf; UniProt SigP or TMHMM,3,0,none,
+GRB10,ENSG00000106070,growth factor receptor bound protein 10,Cytoplasm; Vesicles,High-Quality Pocket; GO CC high conf; Database Ubiquitination; Half-life Data,4,0,none,
+UPP1,ENSG00000183696,uridine phosphorylase 1,Nucleoplasm,Structure with Ligand; High-Quality Ligand; High-Quality Pocket; Druggable Family; Database Ubiquitination; Half-life Data; Small Molecule Binder,7,0,none,
+EXOSC4,ENSG00000178896,exosome component 4,"Cytoplasm; Cytosol; Nucleoplasm; Nucleus; Nucleus, nucleolus; Nucleus, nucleoplasm",Structure with Ligand; Med-Quality Pocket; Database Ubiquitination; Half-life Data,4,0,none,
+VNN1,ENSG00000112299,vanin 1,"Cell membrane ; Lipid-anchor, GPI-anchor; Vesicles",Structure with Ligand; High-Quality Ligand; UniProt loc high conf; GO CC high conf; UniProt SigP or TMHMM; Half-life Data; Small Molecule Binder,7,0,none,

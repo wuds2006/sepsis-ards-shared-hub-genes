@@ -1,0 +1,14 @@
+# large binary single-cell objects (regenerate with the scripts)
+*.rds
+*.h5ad
+*.h5seurat
+*.loom
+*.rds.corrupt.bak
+# raw public data (re-download with scripts/download_data.sh)
+00_rawdata/
+# figures (large TIFFs; shipped with the manuscript, not the code archive)
+*.tiff
+*.tif
+__pycache__/
+.Rhistory
+.DS_Store
