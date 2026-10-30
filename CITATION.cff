@@ -3,15 +3,44 @@ title: "sepsis-ards-shared-hub-genes"
 message: "If you use this software, please cite it using these metadata."
 type: software
 authors:
+  - family-names: "Yang"
+    given-names: "Huobao"
+    orcid: "https://orcid.org/0000-0002-9446-998X"
+  - family-names: "Shen"
+    given-names: "Yanghui"
+    orcid: "https://orcid.org/0000-0003-4874-0502"
+  - family-names: "Chen"
+    given-names: "Wenjun"
+    orcid: "https://orcid.org/0009-0007-9319-7568"
+  - family-names: "Wu"
+    given-names: "Jiali"
+    orcid: "https://orcid.org/0009-0009-1268-5549"
+  - family-names: "Wu"
+    given-names: "Zhimin"
+    orcid: "https://orcid.org/0009-0007-9895-7060"
+  - family-names: "Wu"
+    given-names: "Qihua"
+    orcid: "https://orcid.org/0009-0001-0162-2755"
   - family-names: "Wu"
     given-names: "Dansen"
     orcid: "https://orcid.org/0000-0002-8429-168X"
-version: 1.0.0
-date-released: "2026-10-22"            # set to the actual release date
+    email: "wds_9201851126@fjmu.edu.cn"
+version: 1.1.0
+date-released: "2026-10-30"
 license: MIT
-repository-code: "https://github.com/wuds2006/sepsis-ards-shared-hub-genes"  # [AUTHOR_INPUT_NEEDED]
-url: "https://github.com/wuds2006/sepsis-ards-shared-hub-genes"              # [AUTHOR_INPUT_NEEDED]
-abstract: "Analysis code and derived results for the shared hub-gene and immune-signature study of sepsis and ARDS."
+repository-code: "https://github.com/wuds2006/sepsis-ards-shared-hub-genes"
+url: "https://github.com/wuds2006/sepsis-ards-shared-hub-genes"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.23668532"
+    description: "Zenodo concept DOI (all versions of this software archive)."
+abstract: >-
+  Analysis code, derived results, and data inventory for the shared hub-gene and
+  immune-signature study of sepsis and ARDS. The archive reproduces every number in
+  "Shared Hub Genes and Immune Signatures of Sepsis and ARDS: A Multi-Omics
+  Integration" (Supplementary Methods S1-S14). Raw inputs are public third-party
+  resources and are not redistributed; see DATA_INVENTORY.md and
+  FETCH_PUBLIC_DATA.md for accession numbers, versions, and retrieval commands.
 keywords:
   - sepsis
   - ARDS
@@ -19,3 +48,4 @@ keywords:
   - machine-learning
   - Mendelian-randomization
   - single-cell
+  - drug-repositioning

@@ -1,0 +1,45 @@
+# Python packages required by the analysis scripts
+#
+# Source: module names extracted mechanically from import statements across
+# analysis/*.py. Standard-library modules are listed separately at the bottom.
+# Interpreter: Python 3.13.12 (environment/python_version.txt). Version pins below
+# are only those stated explicitly in Supplementary Methods S12 / S13; the remainder
+# were installed at their then-current versions and were not captured in a
+# pip freeze snapshot.
+
+## Third-party (install these)
+anndata          # single-cell annotated data objects
+celloracle       # in-silico transcription-factor knockout
+docx             # manuscript .docx generation
+fitz / pymupdf / pypdf   # PDF text extraction (literature screening)
+fontTools        # figure font handling
+genomepy         # genome / annotation fetch
+h5py             # HDF5 single-cell I/O
+harmonypy        # batch-effect correction (python side)
+h5ad-compatible scanpy stack:
+scanpy           # single-cell preprocessing, clustering, UMAP, score_genes
+matplotlib       # plotting
+mpl_toolkits     # 3D / axes helpers
+numpy
+openmm           # 8.5.1 - MM/GBSA single-point free energies (Supplementary Methods S12)
+openpyxl         # supplementary table I/O
+pandas
+pdbfixer         # structure preparation prior to MM/GBSA
+plip             # protein-ligand interaction fingerprints
+py3Dmol          # structure visualisation
+pyliftover       # genome-build conversion
+rdkit            # ligand preparation / cheminformatics
+scipy
+sklearn          # machine-learning utilities
+meeko            # ligand preparation for AutoDock Vina 1.2.5
+pymol            # structure rendering (optional, figure panels)
+PIL              # image assembly
+
+## Standard library (no install needed)
+argparse, collections, csv, glob, gzip, io, json, math, os, re, shutil, subprocess,
+sys, urllib, warnings
+
+## External binaries (not Python packages; see FETCH_PUBLIC_DATA.md)
+#   AutoDock Vina 1.2.5   molecular docking (Supplementary Methods S12)
+#   SMR v1.03             SMR + HEIDI (Supplementary Methods S7; analysis/step117_run_smr_heidi.sh)
+#   PLINK 1.9             LD reference construction for HEIDI

@@ -892,3 +892,413 @@ Methods 中仍有 `[AUTHOR_INPUT_NEEDED]` 占位（HPA 版本与检索日期、C
 ### 遗留
 
 - `chembl_known_drugs.csv` 无归档生成脚本（ad-hoc 查询的溯源缺口，结果 CSV 已入 code_archive）；如需补齐可写 step115 固化查询。
+
+---
+
+## 第十八批 · GitHub 建仓 + Zenodo DOI 正式回填（2026-10-24 / 10-26 落稿）
+
+**触发**：作者完成 GitHub 账号认证与仓库创建，取得 Zenodo concept DOI `10.5281/zenodo.23668532`。这是 E-J4（Data Availability 须含可访问代码库与持久 DOI）的最后一项阻塞素材。
+
+### 建仓与认证过程（如实记录）
+
+1. **账号确认**：GitHub 连接器已授权，`get_me` 返回登录名 **wuds2006**（id 107284368），因此无需浏览器输入密码或设备码。
+2. **MCP 建库失败（403）**：`create_repository` 返回 `Resource not accessible by integration` —— 连接器 token 无建库/写权限，故不能依赖 MCP 建库或推文件，改用「网页建库 + SSH push」。
+3. **SSH 密钥**：生成 `~/.ssh/id_ed25519_github`（ed25519、无密码、指纹 `SHA256:8opYZMWhOGBchkj2SWDga9Yg/zq9+PkZFjHWntupGTI`），新建 `~/.ssh/config` 把 `Host github.com` 绑定到该密钥。
+4. **授权踩坑**：首次公钥被添加为 **Signing Key**（仅用于提交签名，不能用于 push 认证），`ssh -T` 报 `Permission denied (publickey)`；改为 **Authentication Key** 后通过，返回 `Hi wuds2006!`。
+5. **push 踩坑**：后台命令运行在沙箱内，`~/.ssh` 被拦截读取，导致 git push 卡在 host key 确认提示；改为前台执行 + 显式 `GIT_SSH_COMMAND`（指定 `-i` 私钥与 `UserKnownHostsFile`）后一次成功。
+
+**结果**：仓库 <https://github.com/wuds2006/sepsis-ards-shared-hub-genes> 已上线，分支 `main` 位于 `f910022`，613 个文件，annotated tag `v1.0.0` 已推送（GitHub API 验证 `refs/tags/v1.0.0` 在线）。
+
+### Zenodo 网络故障排查（2026-10-26）
+
+作者报「Zenodo 连不上」。诊断结论：**不是 Zenodo 故障，也不是账号问题，而是本地 DNS 污染**。
+
+| 检查项 | 结果 |
+|---|---|
+| `curl https://zenodo.org` | HTTP 000（0.15 s 立即失败） |
+| `nslookup zenodo.org`（路由器 192.168.0.1） | **Address: 0.0.0.0** ← 根因 |
+| 外部 DNS（223.5.5.5 / 119.29.29.29 / 114 / 1.1.1.1）及 Google、Cloudflare DoH | 全部超时或同样被污染 |
+| `curl --noproxy '*' --resolve "zenodo.org:443:188.185.42.113"` | **HTTP 200** ← IP 层从未被封 |
+
+真实 IP 经阿里 DoH 的 JSON 端点取得：
+`curl -s "https://dns.alidns.com/resolve?name=zenodo.org&type=A"`（注意是 `/resolve`，不是 `/dns-query`）。
+
+**修复**：经作者同意，用 `osascript ... with administrator privileges` 弹系统授权框，向 `/etc/hosts` 追加三行：
+
+```
+# Zenodo direct resolution - local router DNS returns 0.0.0.0 for zenodo.org
+188.185.42.113 zenodo.org
+188.185.45.63 zenodo.org
+137.138.121.78 zenodo.org
+```
+
+并 `dscacheutil -flushcache && killall -HUP mDNSResponder`。原文件备份于 `/tmp/hosts.bak.<时间戳>`，随时可撤。
+复查：模拟浏览器（无代理变量）访问 `https://zenodo.org/` 返回 HTTP 200（5.8 s）。
+
+### 稿件回填内容（DATA AVAILABILITY，一处）
+
+原文：
+
+> All analysis scripts are available in a public GitHub repository and archived with a persistent DOI on Zenodo **[AUTHOR_INPUT_NEEDED: URL and DOI]**.
+
+改为：
+
+> All analysis scripts are available at https://github.com/wuds2006/sepsis-ards-shared-hub-genes and archived at Zenodo (https://doi.org/10.5281/zenodo.23668532).
+
+该句比原句**少 10 词**，且 DATA AVAILABILITY 按字数规则本就不计入正文，故正文仍为 **3,494** 词，余量 6。
+
+### 配套资产
+
+- `CITATION.cff` / `.zenodo.json`：作者 **Wu, Dansen**，ORCID **0000-0002-8429-168X**，`repository-code` 与 `url` 均为上述 GitHub 地址。
+- 桌面「建仓材料」：`QUICKSTART.md` 改写为「已登录/已推送版」（11 项状态板、两次浏览器点击、push/tag/release、Zenodo 五步、三条 fallback），并新增 **5b 节**记录本次 DNS 污染的完整诊断与修复方法。
+- 代码主管线 `analysis/run_all.sh`（17 stages = S1–S14 + 校验）与 `RESULTS_TO_CODE.md` 逐数字映射表均已入档。
+
+### 校验结果（step95 后重跑 verify_manuscript.py）
+
+- 正文 **3,494** 词（≤3,500）✅；摘要 249 ✅；标题 84 字符 ✅；关键词 5 ✅
+- 引用首现严格升序 True；正文引用 22 条无缺号
+- em dash 0；AI 风格词全 0；T5 唯一句 1；五组配对论断 5/5 True
+- **稿件内 `[AUTHOR_INPUT_NEEDED]` 已清零**（GitHub URL + Zenodo DOI 为最后一处）
+
+### 四联同步
+
+02_ 英文稿 ✅｜03_ 中文稿 ✅｜manuscript_revised.docx ✅｜04_ 日志 ✅（本条目）。
+
+### 遗留（不影响投稿，但建议补齐）
+
+- 标题页六段内容（作者姓名/单位/ORCID、通讯作者、贡献、利益冲突、基金、致谢）
+- 投稿信细节（建议/回避审稿人、ORCID、预印本声明）
+- S26 四个 bulk 队列的祖源与采样时点（现为占位）
+- SMR 五基因名单签核
+- Zenodo 侧：若 concept DOI 页面元数据有误，可在 Zenodo 网页直接编辑（DOI 本身不可改）
+
+---
+
+## 第十九批 · 参考文献时效性与替换（2026-10-29）
+
+**触发**：作者复核 docx 参考文献，列出 23 条发表较早的文献，要求判断是否为「经典 + 高影响 + 密切相关」；
+若否，检索 PubMed 近 5 年真实高质量文献并替换，明确禁止虚假替换。
+
+### 方法
+
+- PubMed E-utilities（esearch/esummary/efetch），日期过滤 2021–2026；
+- 每条候选再用 Crossref `api.crossref.org/works/<DOI>` 核验卷期页与作者。
+- 发现 NCBI `efetch` 的 DOI 字段存在错配（clusterProfiler 4.0 被标为 `10.1109/TCBB.2019.2956708`、
+  Sanderson 2022 被标为 `10.1038/s41467-019-12424-x`），故**一律以 Crossref 为准**。
+
+### 替换结果（4 条，编号不变，总数仍 48）
+
+| 编号 | 原文献 | 新文献 | PMID / DOI |
+|---|---|---|---|
+| 10 | Hotchkiss 2013 *Nat Rev Immunol* | van der Poll T, Shankar-Hari M, Wiersinga WJ. The immunology of sepsis. *Immunity*. 2021;54(11):2450–2464 | 34758337 / 10.1016/j.immuni.2021.10.012 |
+| 11 | Landelle 2010 *Intensive Care Med* | Monneret G, et al. Monocyte HLA-DR expression in septic shock patients: insights from a 20-year real-world cohort of 1023 cases. *Intensive Care Med*. 2025;51(10):1820–1832 | 40986015 / 10.1007/s00134-025-08110-w |
+| 23 | Yu 2012 *OMICS*（clusterProfiler 1.0） | Wu T, et al. clusterProfiler 4.0: A universal enrichment tool for interpreting omics data. *Innovation (Camb)*. 2021;2(3):100141 | 34557778 / 10.1016/j.xinn.2021.100141 |
+| 30 | Smith & Ebrahim 2003 *Int J Epidemiol* | Sanderson E, Glymour MM, Holmes MV, et al. Mendelian randomization. *Nat Rev Methods Primers*. 2022;2:6 | 37325194 / 10.1038/s43586-021-00092-5 |
+
+编号不变的原因：4 条新文献的**首现位置与原文献完全相同**（10、11 在 Introduction 的 (9–12)；
+23、30 在 METHODS 同一处），故正文引用编号无需重排。
+
+### 判定为「不可替代」的 18 条及理由要点
+
+- **方法学/软件/算法原始出处（15 条）**：21 limma、22 WGCNA、24 Random forests、26 glmnet、27 Cox、
+  28 Cox-LASSO、29 RSF、31 LDSC、32 SMR/GSMR、33 COLOC、34 CIBERSORT、35 GSVA、37 BH、
+  38 ComBat、41 DESeq2 —— 引用方法原始文献是出版规范，替换为应用/综述类文献会被判引用不当。
+- **论断或数据集绑定（3 条）**：
+  - 9 Boomer 2011 *JAMA*：免疫抑制的原创人体证据（淋巴细胞凋亡），换成综述会使论证从原始证据降级为转述；
+  - 20 Davenport 2016 *Lancet Respir Med*：GSE65682 的 Mars1–Mars4 endotype 定义文献；
+  - 45 Schalkwijk 2014：正文"RR6 消除大鼠血浆 vanin 活性"论断的唯一支撑，近 5 年 VNN1 抑制剂文献
+    报道的是其他化合物，替换即构成虚假引用。
+
+### 留档的未采用候选（6 条，均经双源核验）
+
+Giamarellos-Bourboulis 2024 *Nat Immunol*（38168953）、Yao 2023 *Mil Med Res*（37337301）、
+Skrivankova 2021 STROBE-MR *JAMA*（34698778）、Guan 2023 VNN1（37608823）、
+Meng 2026 VNN1-ROS-NETs（42473476）、Lv 2025 VNN1 综述（41090263）。
+
+### 产出与校验
+
+- 新增评估报告：`56_Reference_Currency_Review_2026-10-29.md`（23 条逐条判定 + 双源核验记录 + 备选池）。
+- 参考文献仍 **48 条**（≤50）；2021 年前 29 条中 23 条为方法学/定义性文献。
+- `verify_manuscript.py` 重跑：正文 **3,494** 词 ✅；摘要 249 ✅；标题 84 字符 ✅；关键词 5 ✅；
+  引用首现严格升序 True；em dash 0；AI 风格词 0；T5 唯一句 1；配对论断 5/5 True。
+
+### 四联同步
+
+02_ 英文稿 ✅｜03_ 中文稿（无参考文献列表，编号未变，无需改动）✅｜
+manuscript_revised.docx（step95 重生成）✅｜04_ 日志 ✅（本条目）
+
+---
+
+## 第二十批 · AJRCCM 相关文献（12 篇 PDF）引用评估与纳入（2026-10-30）
+
+**触发**：作者提供 12 篇 AJRCCM 及相关杂志文献，要求按 DISCUSSION 实际论断判断可否引用，
+核验真实性/支持关系/论断强度后引用，总数控制在 50 以内。
+
+### 核验方法
+
+- 12 篇 PDF 文本提取（pypdf）后逐篇阅读；正刊论文再经 PubMed + Crossref 双源核验卷期页与 DOI。
+- 三步判定：真实性 → 能否支撑 Discussion 某一句具体论断 → 证据等级决定措辞强度（一律不写成因果）。
+- 起点为 48 条，**净增额度只有 2 条**。
+
+### 已引用（2 条，均为 AJRCCM 正刊原创）
+
+| 编号 | 文献 | 支撑的论断 | 核验 |
+|---|---|---|---|
+| **43** | Aguilar OA, et al. *MICB* genomic variant is associated with NKG2D-mediated acute lung injury and death. *AJRCCM* 2024;209(1):70–82 | DISCUSSION 首段末："血液 NK 减少不排除 NK 在肺内的效应作用"；原文结论为 "support a role for"，故措辞用 "implicates ... in lung injury" | PMID 37878820 / 10.1164/rccm.202303-0472OC，双源一致 |
+| **44** | Sinha P, et al. Molecular phenotypes of ARDS in the ROSE trial. *AJRCCM* 2024;209(7):816–828 | DISCUSSION 第 5 段："ARDS 本身含转录组轨迹各异的分子表型"；因其表型由临床+蛋白 LCA 定义，措辞未写成"转录组定义表型" | PMID 38345571 / 10.1164/rccm.202308-1490OC，双源一致 |
+
+编号重排：新 43、44；原 43–48 → **45–50**（Burnham、Jones、Schalkwijk、Liu、Lim、Antcliffe），英文稿与中文稿同步。
+
+### 未引用（10 篇）及理由
+
+- **正刊 2 篇（额度已满，列为首选备用）**：Kiernan E 2025;211(9):1681–1688（脓毒症亚表型对液体复苏反应不同，
+  可支撑"试验分层"论断，建议替换参考文献 17 或 8 后纳入）；Matthay MA 2024;209(1):37–47（新全球 ARDS 定义，
+  与本文 Berlin 入组口径冲突，仅在局限性段可用）。
+- **会议摘要 8 篇**：证据等级不足（无同行评议全文、样本量小），不用于支撑论断；其中
+  Jones A5372（脓毒症相关 ARDS 的 STAT3/IL-6 遗传通路，与本文 IL6/JAK-STAT3 富集直接契合）与
+  Alipanah-Lechner A3131（多组学重现 ARDS 亚表型、线粒体功能障碍）**正式发表后应优先纳入**；
+  Evrard A4576 的论点已由 Sinha 2024 覆盖；ILD/RIARDS/肌钙蛋白 3 篇与本文论断无接口。
+- 完整逐篇判定见 `57_AJRCCM_PDF_Reference_Assessment_2026-10-30.md`。
+
+### 字数处理
+
+新增两句后正文 **3,517 词**；经 13 处不改变意义的精简（"in this gene set"、"alongside platform scaling"、
+"is unknown here"、"rather than a transcriptionally distinct entity" 等冗余限定语）回到 **3,499 词**（≤3,500）。
+
+### 校验
+
+参考文献 **50 条**（达上限）；正文引用首现**严格升序 True**；50 条全部被引用、无孤儿条目；
+摘要 249；标题 84 字符；关键词 5；em dash 0；AI 风格词 0；T5 唯一句 1；配对论断 5/5 True。
+
+### 四联同步
+
+02_ 英文稿 ✅｜03_ 中文稿（新增两句译文 + 编号映射 43→45 … 48→50）✅｜
+manuscript_revised.docx ✅｜04_ 日志 ✅（本条目）
+
+---
+
+## 第二十一批 · 备选池替换与 Kiernan 2025 纳入（2026-10-30）
+
+在参考文献已满 50 条的前提下，按 2026-10-29 评估留下的备选池执行替换，总数仍为 50。
+
+### 五处处置
+
+| 编号 | 处置 | 文献 |
+|---|---|---|
+| 8 | 替换旧 9（Boomer 2011 *JAMA*） | Giamarellos-Bourboulis EJ, et al. *Nat Immunol* 2024;25(1):19–28（PMID 38168953） |
+| 12 | 新增 | Yao RQ, et al. *Mil Med Res* 2023;10(1):27（PMID 37337301，单细胞 HLA-DR^low S100A^high 单核细胞） |
+| 17 | 替换旧 17（Chen H *Medicine*） | Kiernan E, et al. *AJRCCM* 2025;211(9):1681–1688（PMID 40668865，SP1/SP2 液体复苏反应不同） |
+| 30 | 替换旧 30（Sanderson 2022） | Skrivankova VW, et al. STROBE-MR. *JAMA* 2021;326(16):1614–1621（PMID 34698778） |
+| 48 | 替换旧 48（Liu C *Inflammation*） | Meng S, et al. *J Inflamm Res* 2026;19:591174（PMID 42473476，VNN1-ROS-NETs 脓毒症肺损伤） |
+
+删除旧 8（Liu T *J Inflamm Res* 2025）以腾出额度；(6–8) 改为 (6, 7)。
+编号映射：旧 9→8、10→9、11→10、12→11，13 及以后不变。
+
+### 论断边界（避免虚假引用）
+
+- Yao 2023 用 resolves，不作因果断言。
+- STROBE-MR 为报告规范，故 METHODS 措辞改为 "following STROBE-MR (30)"，不冒充方法学出处。
+- Kiernan 2025 的亚表型由**血浆蛋白**模型（Ang-1/2 + sTNFR-1）定义，故只写"反应不同"，未写成转录组定义亚表型；数据：SP2 41% vs 27%、SP1 9% vs 9%、交互 P=0.02。
+- Meng 2026 未指明抑制剂种类，故不把 RR6 与该研究绑定；Schalkwijk 2014（新 47）保留。
+- 已知代价：Boomer 2011 的原创人体证据被权威综述取代（用户指定的取舍）。
+
+### 字数
+
+3,499 → 替换与新增后 3,516 → 11 处精简 3,500 → 恢复 2 处配对论断限定语 → 再 5 处微调 **3,495**（目标区间 3,490–3,497）。
+注意：`verify_manuscript.py` 的守卫要求"true absence of causality"与"established causal targets"原文保留，误删会使配对论断转 False，已恢复。
+
+### 校验
+
+正文 **3,495**；摘要 249；参考文献 **50 条**；首现严格升序 True、50 条全部引用无孤儿；
+主图 1–10 / 表 1–3 全引用；em dash 0；AI 词 0；T5 唯一句 1；配对论断 5/5 True。
+
+### 四联同步
+
+02_ 英文稿 ✅｜03_ 中文稿（编号映射 + 三处新译文 + 删除"两种读出重现了该表型"）✅｜
+manuscript_revised.docx（step95 重生成，新 5 篇在、旧 3 篇已清，条目 50）✅｜04_ 日志 ✅（本条目）
+
+完整核验与理由见 `58_Reference_Swap_Round2_2026-10-30.md`。
+
+---
+
+## 第二十二批（2026-10-30）：第 7 条反向替换——恢复 Boomer 2011（淋巴细胞凋亡的原创人体证据）
+
+### 触发
+
+作者决定撤回第二十一批对 8 号位的取舍：Boomer 2011 *JAMA* 是"脓毒症淋巴细胞凋亡 + 单核细胞 HLA-DR 下调"的**原创人体证据**（脾与肺组织），
+权威综述不可替代其出处地位；故以第 7 条（Wei 2025 *Front Mol Biosci*）为其腾位。
+
+### 处置（1 处替换，编号不动）
+
+| 编号 | 处置 | 文献 |
+|---|---|---|
+| 7 | 替换（Wei J, et al. *Front Mol Biosci* 2025;12:1665387 移出） | Boomer JS, To K, Chang KC, Takasu O, Osborne DF, Walton AH, et al. Immunosuppression in patients who die of sepsis and multiple organ failure. *JAMA*. 2011;306(23):2594–2605. doi:10.1001/jama.2011.1829（PMID 22187279） |
+
+元数据双源核验：PubMed efetch（PMID 22187279）与 Crossref（10.1001/jama.2011.1829）一致；
+注意 10.1001/jama.2011.**1828** 在 Crossref 上指向另一篇（Needlestick Injuries），**不可用**。
+
+### 正文连带改动（论断与编号对齐）
+
+- INTRODUCTION："Shared-gene screens spanning the two diseases have been reported (6, 7)." → "(6)"（共享基因筛选现仅 Jiang 2024 一条，与 DISCUSSION 中"（6）提名 CX3CR1/PID1/PTGDS"口径一致）。
+- INTRODUCTION 与 DISCUSSION 两处免疫抑制论断："(8–11)" → "(7–11)"，Boomer 2011 居该组首位，即组内最早的原创人体证据。
+- 首现顺序仍为 6 → 7（同句内 6 先于 7），严格升序 True。
+
+### 论断边界
+
+- Boomer 2011 为人体脾/肺组织的观察性证据，故仍限定为"以淋巴细胞凋亡、MDSC 扩增与单核细胞 HLA-DR 下调为特征"，
+  未改写成因果或预后断言。
+- 第 7 条不再承担"共享基因筛选"论断——该论断归 (6)；Boomer 未被用于任何它不支持的句子。
+
+### 字数
+
+3,495 → **3,494**（"(6, 7)"→"(6)" 减 1 词；参考文献列表不计入正文）。区间 3,490–3,497，余量 6 词。
+
+### 校验
+
+正文 **3,494**；摘要 249；参考文献 **50 条**；全部引用无孤儿、首现严格升序 True；
+主图 1–10 / 表 1–3 全引用；em dash 0；AI 词 0；T5 唯一句 1；配对论断 5/5 True。
+
+### 四联同步
+
+02_ 英文稿 ✅｜03_ 中文稿（"（6, 7）"→"（6）"、两处"（8-11）"→"（7-11）"，并在引言补"最早在人体脾与肺组织中得到证明（7）"；头部数据说明更新为 3,494 词 / 50 条）✅｜
+manuscript_revised.docx（step95 重生成；Boomer 在、Wei J 已清，条目 50）✅｜
+投稿包 `~/Desktop/投稿材料`（step114 + safe-copy shim 重建：主图 10、补充图 21、补充表 27、内嵌图 10、正文表 3，包内 50 条）✅｜
+桌面建仓仓库 `~/Desktop/建仓材料/repo/manuscript/02_Manuscript_Revised.md` 已同步（未提交，待作者决定是否 commit/push）✅
+
+完整核验与理由见 `59_Reference_Swap_Round3_Boomer_2026-10-30.md`。
+
+---
+
+## 第二十三批（2026-10-30）：作者信息与声明回填 ＋ 防御性写作第二轮清理 ＋ B 方案加词 ＋ 审稿人建议
+
+### 触发
+
+作者提供完整的作者署名、单位、ORCID、邮箱、基金、CRediT、利益冲突、AI 披露、Impact statement 与通讯作者信息，
+并要求：① 据此更新稿件；② 用 anti-defensive-writing 规则对全文做第二轮防御性写作审查；③ 采用 B 方案加词（+8，不再为字数精简）；
+④ 腾位候选更新为第 6 条 Jiang 2024、Wei 2025 退回备选池；⑤ 依据研究内容与所引 *AJRCCM* 论文作者群推荐审稿人。
+
+### 一、作者信息与声明回填（02_ 声明小节 ＋ 51_ 标题页）
+
+| 项 | 处置 |
+|---|---|
+| AUTHOR CONTRIBUTIONS（CRediT） | 按作者原文逐句写入 02_ `AUTHOR CONTRIBUTIONS` 与 51_ 标题页（含串行 Oxford comma 统一） |
+| FUNDING | 写入 02_ `FUNDING` 与 51_：三项基金（0060112505 → Xiuling Shang；2019HSJJ09、{2025}881 → Dansen Wu） |
+| CONFLICT OF INTEREST | 写入 02_ 与 51_："The authors reported no relevant financial relationships with ineligible companies." |
+| AI USAGE DISCLOSURE | 三处统一为同一句（投稿系统勾选 ↔ 标题页 ↔ 稿件内小节） |
+| Impact statement | 写入 51_ 投稿系统字段（作者原文，未改） |
+| 作者与单位 | 7 位作者（Huobao Yang / Yanghui Shen / Wenjun Chen / Jiali Wu / Zhimin Wu / Qihua Wu / Dansen Wu），通讯作者置末位；单位 1–4；ORCID 与邮箱全部填入 51_ |
+| 投稿信 | `step114` 中 (5)(6)(7) 条与落款改为实名实单位（Dansen Wu、ORCID、邮箱），(7) 指向 `61_` |
+
+**⚠️ P0 一致性问题（未擅自改）**：CRediT 写 "Y.S., W.C. and J.W. contributed to performing the experiments"，
+与稿件 `ETHICS APPROVAL AND CONSENT TO PARTICIPATE` 中 "no human or animal experiments were performed by the authors" 直接矛盾。
+建议改为 "contributed to data curation, formal analysis, and development of methodology"。待作者裁决。
+另：作者提供的字数 3,747（Introduction 453 / Methods 347 / Results 1,660 / Discussion 1,223 / Conclusion 64）为压缩前口径，
+与当前稿 3,486 不一致，51_ 已按当前稿改写并说明。
+
+### 二、B 方案加词（已执行）
+
+DISCUSSION 免疫抑制论断后加：**"first shown in human spleen and lung tissue (7)"**（+8 词），
+点名 Boomer 2011 为淋巴细胞凋亡的原创人体证据。作者裁决"不再精简"，故未因超限回删。
+
+### 三、防御性写作第二轮清理（A 类 6 处，−17 词）
+
+| # | 位置 | 删改 | 依据 |
+|---|---|---|---|
+| A1 | DISCUSSION | "…is threshold- and cohort-dependent, **not a refutation**" → "…**reflects thresholds and cohorts**" | 预防"是否定前人"的假想质疑 |
+| A2 | DISCUSSION | "Validation cohorts narrowed seven candidates to six, so those estimates carry mild optimism." 整句删除 | 与 METHODS 末句同一限定重复 |
+| A3 | DISCUSSION | "**Two caveats limit inference:**" 删标签 | 先示警再举证的免责框架 |
+| A4 | RESULTS | "screening did not inflate performance" → "the screening step left performance unchanged" | "not X"式防御 → 中性陈述 |
+| A5 | DISCUSSION | "Direct therapeutic targeting is unsupported…" → "Causal-genetic evidence supports their use as markers, not as therapeutic targets." | 负面框架 → 正面说明证据支持什么 |
+| A6 | RESULTS | 删冗余转折 "but" | 前后为并列证据 |
+
+B 类 12 处（真实选择偏倚边界、过拟合标注、注释分组非模块、完全分离假象、零结果表述、血液数据边界等）**明确保留**，不得删除。
+
+**字数**：3,503（B 方案加词后）→ **3,486**（−17）。B 方案加词完整保留，且终值回到上限内（余量 14）。
+
+### 四、腾位候选更新
+
+后续若需增引，腾位候选正式定为第 **6** 条 Jiang 2024 *Front Immunol*；Wei 2025 *Front Mol Biosci* 退回备选池（已写入 `59_` 第八节）。
+
+### 五、审稿人建议
+
+新文件 `61_Reviewer_Suggestions_2026-10-30.md`：主名单 8 名（Hotchkiss、Calfee、Bos、Davenport、van der Poll、Sinha、Shankar-Hari、Uhel）＋ 方法学备选 3 名（Scicluna、Burgess、Alipanah-Lechner），
+给出三套组合（推荐"丙：Calfee、Bos、Davenport、Hotchkiss"）与回避名单。**邮箱一律不臆造**，仅 Calfee 来自实验室公开页，其余标 `[需核实]`。
+
+### 校验（verify_manuscript.py，n_refs=50）
+
+正文 **3,486**（引言 445 / Methods 353 / Results 1,529 / Discussion 1,095 / Conclusion 64）；摘要 **249**；
+参考文献 **50 条**（全引用、无孤儿、首现严格升序 True）；主图 1–10 / 表 1–3 全引用；
+em dash 0；AI 词 0；T5 唯一句 1；配对论断 **5/5 True**。
+
+### 四联同步
+
+02_ 英文稿 ✅｜03_ 中文稿 ✅（A1–A6 对应中文句同步改写，头部数据更新为 3,486 词 / 50 条）｜
+`manuscript_revised.docx`（step95 重生成；Boomer 在、"spleen and lung" 在、"not a refutation"/"Two caveats" 已清、声明与基金在内、50 条）✅｜
+投稿包 `~/Desktop/投稿材料`（step114 + safe-copy shim 重建：主图 10、补充图 21、补充表 27、内嵌图 10、正文表 3；Cover_Letter.docx 落款已实名化）✅｜
+桌面建仓仓库 `~/Desktop/建仓材料/repo/manuscript/02_Manuscript_Revised.md` 已同步（**未 commit/push**）✅
+
+完整依据见 `60_Defensive_Writing_Audit_2026-10-30.md` 与 `61_Reviewer_Suggestions_2026-10-30.md`。
+
+---
+
+## 第二十四批（2026-10-30）：CRediT 措辞裁决落地（P0 关闭）
+
+### 触发
+
+第二十三批标记的两处待裁决，作者已裁定。
+
+### 处置
+
+| # | 裁决 | 执行 |
+|---|---|---|
+| 1 | CRediT 改为 "contributed to data curation, formal analysis, and development of methodology" | 02_ `AUTHOR CONTRIBUTIONS` 与 51_ 标题页两处同步替换；51_ 第六节 P0 行标记为 ✅ 已解决；第一节省略提示同步改写 |
+| 2 | 正文 **3,486** 词为准 | 51_ 字数口径维持 3,486（Introduction 445 / Methods 353 / Results 1,529 / Discussion 1,095 / Conclusion 64），摘要 249；作者提供的 3,747 旧口径作废 |
+
+替换后与 `ETHICS APPROVAL AND CONSENT TO PARTICIPATE` 的 "no human or animal experiments were performed by the authors" 不再冲突，P0 关闭。
+
+### 校验
+
+正文 **3,486**（声明小节不计入，改动不影响字数）；摘要 249；参考文献 **50 条**、无孤儿、首现严格升序 True；
+主图 1–10 / 表 1–3 全引用；em dash 0；AI 词 0；T5 唯一句 1；配对论断 **5/5 True**。
+
+### 四联同步
+
+02_ ✅｜03_ 中文稿（不含声明小节，无需改）✅｜`manuscript_revised.docx`（step95 重生成；"performing the experiments" 已清、"data curation, formal analysis" 已在）✅｜
+投稿包 `~/Desktop/投稿材料`（step114 + safe-copy shim 重建：主图 10、补充图 21、补充表 27、内嵌图 10、正文表 3；包内 Manuscript_Submission.docx 同步）✅｜
+51_ 已复制入 `05_内部备查_不投稿`；桌面建仓仓库 `02_`/`04_` 已同步（**未 commit/push**）✅
+
+### 剩余待作者（非阻塞）
+
+署名顺序确认、基金编号 `{2025}881` 花括号、通讯作者电话、Acknowledgments、预印本有无、审稿人最终 3–5 名与邮箱核实。
+
+---
+
+## 第二十四批（2026-10-30）：CRediT 措辞裁决落地（P0 关闭）
+
+### 触发
+
+第二十三批标记的两处待裁决，作者已裁定。
+
+### 处置
+
+| # | 裁决 | 执行 |
+|---|---|---|
+| 1 | CRediT 改为 "contributed to data curation, formal analysis, and development of methodology" | 02_ `AUTHOR CONTRIBUTIONS` 与 51_ 标题页两处同步替换；51_ 第六节 P0 行标记为 ✅ 已解决；第一节省略提示同步改写 |
+| 2 | 正文 **3,486** 词为准 | 51_ 字数口径维持 3,486（Introduction 445 / Methods 353 / Results 1,529 / Discussion 1,095 / Conclusion 64），摘要 249；作者提供的 3,747 旧口径作废 |
+
+替换后与 `ETHICS APPROVAL AND CONSENT TO PARTICIPATE` 的 "no human or animal experiments were performed by the authors" 不再冲突，P0 关闭。
+
+### 校验
+
+正文 **3,486**（声明小节不计入，改动不影响字数）；摘要 249；参考文献 **50 条**、无孤儿、首现严格升序 True；
+主图 1–10 / 表 1–3 全引用；em dash 0；AI 词 0；T5 唯一句 1；配对论断 **5/5 True**。
+
+### 四联同步
+
+02_ ✅｜03_ 中文稿（不含声明小节，无需改）✅｜`manuscript_revised.docx`（step95 重生成；"performing the experiments" 已清、"data curation, formal analysis" 已在）✅｜
+投稿包 `~/Desktop/投稿材料`（step114 + safe-copy shim 重建：主图 10、补充图 21、补充表 27、内嵌图 10、正文表 3；包内 Manuscript_Submission.docx 同步）✅｜
+51_ 已复制入 `05_内部备查_不投稿`；桌面建仓仓库 `02_`/`04_` 已同步（**未 commit/push**）✅
+
+### 剩余待作者（非阻塞）
+
+署名顺序确认、基金编号 `{2025}881` 花括号、通讯作者电话、Acknowledgments、预印本有无、审稿人最终 3–5 名与邮箱核实。
