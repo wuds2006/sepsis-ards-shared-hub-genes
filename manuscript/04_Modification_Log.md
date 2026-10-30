@@ -1302,3 +1302,53 @@ em dash 0；AI 词 0；T5 唯一句 1；配对论断 **5/5 True**。
 ### 剩余待作者（非阻塞）
 
 署名顺序确认、基金编号 `{2025}881` 花括号、通讯作者电话、Acknowledgments、预印本有无、审稿人最终 3–5 名与邮箱核实。
+
+---
+
+## 第二十五批（2026-10-30）：Data availability 配套的标准数据与材料包（v1.1.0）
+
+### 触发
+
+AJRCCM 投稿要求上传 Data availability（GitHub URL + Zenodo DOI）。仓库此前只有代码与部分结果，
+缺少"标准数据与材料"的三层要件：① 公开输入的完整清单；② 原始数据可取回的执行路径；③ 环境版本。
+
+### 新增／更新（8 类，均已入仓）
+
+| # | 文件 | 内容 |
+|---|---|---|
+| 1 | `DATA_INVENTORY.md` | 19 条公开输入：GEO 登录号 + 平台 + 样本类型 + 角色 + 纳入/排除样本数 + 版本 + 检索日期 |
+| 2 | `DATA_INVENTORY.csv` | 同上机读版（含 `redistributed_here=no`，明示不二次分发第三方数据） |
+| 3 | `FETCH_PUBLIC_DATA.md` | 逐条取数命令（GEO FTP / IEU OpenGWAS / FinnGen R11 / eQTLGen 断点续传）＋指向 `analysis/download_data*.sh` |
+| 4 | `environment/tool_versions.txt` | R 4.6.1、Python 3.13.12、monocle3 1.3.1、SMR 1.03、PLINK 1.9、AutoDock Vina 1.2.5、OpenMM 8.5.1 与资源版本/检索日期 |
+| 5 | `environment/R_packages_used.txt` | 由脚本机械抽取的 71 个 R 包（附抽取命令） |
+| 6 | `environment/python_packages_used.txt` | 第三方 Python 模块与标准库分离 |
+| 7 | `manuscript/supplementary_tables/` | 补齐至 27 份随稿补充表（13 → 34 文件） |
+| 8 | `CITATION.cff` / `.zenodo.json` / `README.md` | v1.1.0、7 位作者全列（含 ORCID）、Zenodo DOI 写入 identifiers；README 增 Data availability / Permanent identifiers / Cite this |
+
+诚实标注：GEO 与 GWAS 的逐文件下载日期当时未记录，CSV 中一律 `not recorded`，不回填推测值。
+
+### 稿件同步
+
+02_ `DATA AVAILABILITY` 末句补："The deposit contains the analysis code, the derived result files,
+all 27 supplementary tables as submitted, a machine-readable inventory of every public input with
+accession numbers, platform versions, and access dates, and a runbook for retrieving the raw data."
+（声明小节不计入正文，正文仍 **3,486** 词）。03_ 中文稿同步。
+
+### 归档与推送
+
+`MANIFEST.txt` 重生成（**641** 文件，size + SHA-256）；`code_archive.zip` 重建 **23.3 MB**，`unzip -t` 无错误。
+`git push origin main` → `f910022..b9e0117`；tag **v1.1.0** 已推送（`git ls-remote --tags` 确认指向 b9e0117）。
+DataCite 复核：concept DOI 10.5281/zenodo.23668532，当前版本 v1.0.0（版本 DOI 10.5281/zenodo.23668533，
+IsSupplementTo → GitHub tree/v1.0.0）。
+
+### ☐ 待作者一步操作
+
+Zenodo 监听 GitHub **Release 发布**事件，故需在网页对 tag v1.1.0 创建并 Publish release；
+发布后 concept DOI 不变，稿件中的 DOI 无需修改（详见 `62_` 第六节）。
+
+### 四联同步
+
+02_ ✅｜03_ ✅｜`manuscript_revised.docx` ✅｜投稿包 `~/Desktop/投稿材料` ✅（step114 + safe-copy shim 重建：主图 10、补充图 21、补充表 27、内嵌图 10、正文表 3）｜
+`62_`、`51_` 已复制入 `05_内部备查_不投稿`；仓库 `02_`/`03_`/`04_` 已同步并提交推送 ✅
+
+完整依据见 `62_Data_Materials_Package_2026-10-30.md`。
