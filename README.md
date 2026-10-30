@@ -28,13 +28,15 @@ repository's `results/` folder holds the archived copies of those outputs.
 | File | Purpose |
 |---|---|
 | `RESULTS_TO_CODE.md` | **start here** — every RESULTS number of the manuscript mapped to the scripts and `results/` files that produce it, keyed to Supplementary Methods sections S1-S14 |
+| `DATA_INVENTORY.md` / `DATA_INVENTORY.csv` | **data availability** — every public input (GEO accession, GWAS ID, eQTL, protein/structure/pharmacology resource) with platform, version, sample counts, exclusions, access date, and role |
+| `FETCH_PUBLIC_DATA.md` | retrieval runbook: the exact commands to rebuild the raw input tree from GEO, IEU OpenGWAS, FinnGen, and eQTLGen |
 | `run_all.sh` | master pipeline (stage registry; one stage per Supplementary Methods section) |
 | `PATHS.md` | every absolute path the scripts reference, and how to point them at your machine |
 | `METHODS_TO_CODE.md` | sentence-level map from every Methods step to scripts and outputs |
 | `analysis/` | all scripts (R / Python / bash), described in the pipeline map below |
 | `results/` | archived derived outputs; every manuscript number traces here |
-| `manuscript/` | submitted manuscript text and supplementary materials (Markdown, synced 2026-10-21) |
-| `environment/` | R and Python versions and the installed R package list |
+| `manuscript/` | submitted manuscript text, supplementary methods, figure legends, and all 27 supplementary tables as submitted (synced 2026-10-30) |
+| `environment/` | interpreter and tool versions (`tool_versions.txt`) plus R and Python package inventories |
 | `MANIFEST.txt` | byte size and SHA-256 checksum for every file |
 
 ## Pipeline map (stage = Supplementary Methods section)
@@ -71,6 +73,11 @@ superseding the original UPP1 box in `step4_docking_site.py`
 
 ## Data sources (public, not redistributed here)
 
+Full inventory with accession numbers, platforms, versions, sample counts, exclusions,
+and access dates: [`DATA_INVENTORY.md`](DATA_INVENTORY.md) (and `DATA_INVENTORY.csv`).
+Retrieval commands: [`FETCH_PUBLIC_DATA.md`](FETCH_PUBLIC_DATA.md).
+Summary:
+
 | Dataset | Source | Version / access date |
 |---|---|---|
 | GSE76293, GSE69528, GSE100159, GSE243066, GSE151263, GSE167363 | Gene Expression Omnibus | series matrices as deposited |
@@ -93,12 +100,21 @@ locations under `00_rawdata/`.
 
 ## Environment
 
-R 4.6.1 and Python 3.13. Key R packages: limma, WGCNA, clusterProfiler,
-TwoSampleMR, survival, rms, glmnet, ranger, GSVA, CellChat, monocle3, slingshot,
-Seurat, scTenifoldKnk, DESeq2, coloc, fgsea. See `environment/R_packages.csv`
-for the full list with versions.
-External binaries required by specific stages: AutoDock Vina 1.2.5 (S12);
-SMR v1.03 + PLINK + LDSC (S7; see `step117_run_smr_heidi.sh`).
+R 4.6.1 and Python 3.13.12. Full inventories, extracted mechanically from the scripts:
+
+- `environment/R_packages_used.txt` — 71 R packages (key ones: limma, WGCNA,
+  clusterProfiler, TwoSampleMR, survival, rms, glmnet, ranger, GSVA, CellChat,
+  monocle3 1.3.1, slingshot, Seurat, scTenifoldKnk, DESeq2, coloc, fgsea)
+- `environment/python_packages_used.txt` — third-party Python modules (scanpy,
+  anndata, celloracle, sklearn, OpenMM 8.5.1, rdkit, meeko, …)
+- `environment/tool_versions.txt` — interpreter and tool pins (SMR 1.03,
+  AutoDock Vina 1.2.5, OpenMM 8.5.1, PLINK 1.9, monocle3 1.3.1) and resource
+  versions with access dates
+
+Only the versions stated above were explicitly recorded; the remaining packages were
+installed at their then-current releases and were not captured in a package-lock
+snapshot. External binaries required by specific stages: AutoDock Vina 1.2.5 (S12);
+SMR v1.03 + PLINK + LDSC (S7; see `analysis/step117_run_smr_heidi.sh`).
 
 ## Reproducibility
 
@@ -108,6 +124,38 @@ negative-control sampling); seeds are fixed in the scripts.
 `verify_manuscript.py` re-checks the manuscript's word counts, citation
 ordering, and numeric claim anchors against this repository.
 
+## Data availability and materials
+
+This study is a **secondary analysis of public data**: no new participants were
+enrolled, no identifiable personal data were accessed, and no raw public data are
+redistributed here (their licences and size prohibit it). The repository therefore
+ships the complete *materials* set:
+
+| Layer | Contents |
+|---|---|
+| Code | 217 scripts (R / Python / bash) + `run_all.sh` (17 stages → Supplementary Methods S1-S14) |
+| Derived results | 369 files under `results/`, one folder per analysis module |
+| Manuscript materials | manuscript text, Supplementary Methods S1-S14, figure legends, and all 27 supplementary tables as submitted |
+| Input provenance | `DATA_INVENTORY.md` / `.csv` (19 input entries) and `FETCH_PUBLIC_DATA.md` |
+| Environment | `environment/tool_versions.txt`, `R_packages_used.txt`, `python_packages_used.txt` |
+| Integrity | `MANIFEST.txt` (size + SHA-256 per file), `code_archive.zip` |
+
+Deliberately excluded and re-downloadable: raw public data (`00_rawdata/`),
+large single-cell objects (`*.rds`, `*.h5ad`, `*.h5seurat`), and figure TIFFs
+(shipped with the manuscript). See `.gitignore`.
+
+## Permanent identifiers
+
+- Code repository: **https://github.com/wuds2006/sepsis-ards-shared-hub-genes**
+- Archived release (all versions): **https://doi.org/10.5281/zenodo.23668532** (Zenodo concept DOI)
+
+## Cite this
+
+Wu D, Yang H, Shen Y, Chen W, Wu J, Wu Z, Wu Q. *sepsis-ards-shared-hub-genes*
+(version 1.1.0). Zenodo. https://doi.org/10.5281/zenodo.23668532
+(`CITATION.cff` carries the same metadata in machine-readable form.)
+
 ## Licence
 
-MIT. See `LICENSE`.
+MIT. See `LICENSE`. Third-party data are governed by their own terms of use;
+see `DATA_INVENTORY.md`.

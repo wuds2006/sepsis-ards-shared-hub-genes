@@ -2,20 +2,33 @@
   "upload_type": "software",
   "access_right": "open",
   "license": "MIT",
-  "title": "sepsis-ards-shared-hub-genes",
+  "title": "sepsis-ards-shared-hub-genes: code, derived results, and data inventory for the sepsis/ARDS shared hub-gene study",
+  "version": "1.1.0",
   "creators": [
-    {
-      "name": "Wu, Dansen",
-      "orcid": "0000-0002-8429-168X"
-    }
+    { "name": "Yang, Huobao", "orcid": "0000-0002-9446-998X" },
+    { "name": "Shen, Yanghui", "orcid": "0000-0003-4874-0502" },
+    { "name": "Chen, Wenjun", "orcid": "0009-0007-9319-7568" },
+    { "name": "Wu, Jiali", "orcid": "0009-0009-1268-5549" },
+    { "name": "Wu, Zhimin", "orcid": "0009-0007-9895-7060" },
+    { "name": "Wu, Qihua", "orcid": "0009-0001-0162-2755" },
+    { "name": "Wu, Dansen", "orcid": "0000-0002-8429-168X" }
   ],
-  "description": "Analysis code and derived results for the shared hub-gene and immune-signature study of sepsis and ARDS (Supplementary Methods S1-S14).",
+  "description": "Analysis code, derived results, and the complete input inventory for the shared hub-gene and immune-signature study of sepsis and ARDS (Supplementary Methods S1-S14). Contains 217 analysis scripts driven by run_all.sh (17 stages), 369 derived result files, the manuscript text and all 27 supplementary tables as submitted, plus DATA_INVENTORY.md/csv (accession numbers, platforms, versions, and access dates for every public input), FETCH_PUBLIC_DATA.md (retrieval runbook), and environment/tool_versions.txt. Raw public data are not redistributed: all inputs are third-party resources re-downloadable from GEO, IEU OpenGWAS, FinnGen, eQTLGen, HPA, PDB, ChEMBL, and Open Targets.",
   "keywords": [
     "sepsis",
     "ARDS",
     "transcriptomics",
     "machine-learning",
     "Mendelian-randomization",
-    "single-cell"
+    "single-cell",
+    "drug-repositioning"
+  ],
+  "notes": "Secondary analysis of public data. Corresponding author: Dansen Wu (wds_9201851126@fjmu.edu.cn), Fuzhou University Affiliated Provincial Hospital, Fuzhou, China.",
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/wuds2006/sepsis-ards-shared-hub-genes",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    }
   ]
 }

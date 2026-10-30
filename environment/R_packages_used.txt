@@ -1,0 +1,87 @@
+# R packages required by the analysis scripts
+#
+# Source: names extracted mechanically from library()/require()/pkg:: calls across
+# analysis/*.R (n = 71 distinct packages). See environment/R_version.txt for the
+# interpreter (R 4.6.1). Version pins below are only those that appear explicitly in
+# Supplementary Methods; the remainder were installed at their then-current CRAN /
+# Bioconductor / GitHub versions and were not captured in a sessionInfo snapshot.
+#
+# Regenerate the list with:
+#   grep -rhoE '\b(library|require)\(\s*[A-Za-z0-9_.]+|\b[A-Za-z0-9_.]+::' analysis \
+#     | sed -E 's/.*\(\s*//; s/::$//' | sort -u
+
+AUCell
+BiocManager
+CellChat
+ComplexHeatmap
+DESeq2
+FNN
+GSEABase
+GSVA
+Matrix
+RColorBrewer
+Seurat
+TwoSampleMR
+VennDiagram
+WGCNA
+circlize
+class
+clusterProfiler
+coloc
+corrplot
+cowplot
+data.table
+dplyr
+e1071
+enrichplot
+fgsea
+gbm
+ggalluvial
+ggforce
+ggplot2
+ggplotify
+ggpubr
+ggrepel
+ggsci
+glmnet
+grDevices
+grid
+harmony
+igraph
+kernelshap
+limma
+monocle3
+nnet
+org.Hs.eg.db
+pROC
+parallel
+patchwork
+pheatmap
+preprocessCore
+prodlim
+ragg
+randomForest
+ranger
+readr
+reshape2
+riskRegression
+rms
+rpart
+scTenifoldKnk
+scales
+shapviz
+slingshot
+spdep
+stats
+stringr
+survival
+survminer
+sva
+tibble
+tidyr
+timeROC
+xgboost
+
+# Explicit version pins (from Supplementary Methods S4 / S5):
+#   monocle3       1.3.1
+# Install-all helper: analysis/install_R_packages.R
