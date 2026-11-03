@@ -67,8 +67,8 @@ manual downloads — see README "Data sources"):
   `scripts/common.R`, the docking `BASE` variants.
 - **Non-blocking** (figure assembly and manuscript editing only; not executed
   by `run_all.sh`): `AJRCCM_submission/`, `09_review_deAI_2026-09-25/`, and the
-  Desktop paper-project path used by 5 early scripts — the archive's own
-  `manuscript/` copy supersedes them.
+  Desktop paper-project path used by 5 early scripts — the archive's
+  former `manuscript/` copy (removed 2026-11-03) superseded them.
 - The Desktop path above contains Chinese characters; if your shell or sed
   build mishandles them, delete the five referencing references with the
   Option B command anyway (they are single-line constants).

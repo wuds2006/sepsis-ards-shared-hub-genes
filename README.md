@@ -35,7 +35,7 @@ repository's `results/` folder holds the archived copies of those outputs.
 | `METHODS_TO_CODE.md` | sentence-level map from every Methods step to scripts and outputs |
 | `analysis/` | all scripts (R / Python / bash), described in the pipeline map below |
 | `results/` | archived derived outputs; every manuscript number traces here |
-| `manuscript/` | submitted manuscript text, supplementary methods, figure legends, and all 27 supplementary tables as submitted (synced 2026-10-30) |
+| `manuscript/` | removed (2026-11-03): the submitted-manuscript copy contained author-identifying personal information and is no longer redistributed here |
 | `environment/` | interpreter and tool versions (`tool_versions.txt`) plus R and Python package inventories |
 | `MANIFEST.txt` | byte size and SHA-256 checksum for every file |
 
@@ -135,7 +135,7 @@ ships the complete *materials* set:
 |---|---|
 | Code | 217 scripts (R / Python / bash) + `run_all.sh` (17 stages → Supplementary Methods S1-S14) |
 | Derived results | 369 files under `results/`, one folder per analysis module |
-| Manuscript materials | manuscript text, Supplementary Methods S1-S14, figure legends, and all 27 supplementary tables as submitted |
+| Manuscript materials | removed from the public archive (2026-11-03): author-identifying personal information; available from the journal submission, not from this repository |
 | Input provenance | `DATA_INVENTORY.md` / `.csv` (19 input entries) and `FETCH_PUBLIC_DATA.md` |
 | Environment | `environment/tool_versions.txt`, `R_packages_used.txt`, `python_packages_used.txt` |
 | Integrity | `MANIFEST.txt` (size + SHA-256 per file), `code_archive.zip` |
