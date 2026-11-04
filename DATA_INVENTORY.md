@@ -16,9 +16,9 @@ paper.
 | GEO accession | Platform | Sample type | Role in the study | Samples used | Samples excluded |
 |---|---|---|---|---|---|
 | GSE76293 | GPL570 (Affymetrix HG-U133 Plus 2) | Whole blood / PMN fractions | **ARDS discovery** (DEG + WGCNA + ML training set) | 12 ARDS + 12 healthy volunteers (n=24) | 70 in-vitro GM-CSF / PI3K-inhibitor-cultured PMN samples |
-| GSE69528 | GPL10558 (Illumina HumanHT-12 V3.0) | Whole blood | **Sepsis discovery** (DEG + WGCNA + ML training set) | 83 sepsis + 28 uninfected controls (n=111) | 27 uninfected type-2-diabetes samples |
+| GSE69528 | GPL10558 (Illumina HumanHT-12 V4.0) | Whole blood | **Sepsis discovery** (DEG + WGCNA + ML training set) | 83 sepsis + 28 uninfected controls (n=111) | 27 uninfected type-2-diabetes samples |
 | GSE243066 | GPL30209 (MGISEQ-2000RS, PBMC RNA-seq) | Peripheral-blood mononuclear cells | **ARDS external validation** | 34 ARDS + 15 controls (n=49); blood within 24 h of admission | — |
-| GSE100159 | GPL6884 (Illumina HumanRef-8 v3.0) | Whole blood | **Sepsis external validation** | 33 sepsis + 12 controls (n=45) | — |
+| GSE100159 | GPL6884 (Illumina HumanWG-6 v3.0) | Whole blood | **Sepsis external validation** | 33 sepsis + 12 controls (n=45) | — |
 | GSE151263 | 10x Genomics (single cell) | PBMC | **Single-cell** ARDS vs sepsis: CellChat, slingshot / Monocle3 trajectories, AUCell, virtual knockout, metabolic scoring | 13,996 cells; 3 ARDS + 4 sepsis donors | QC-failed cells / doublets |
 | GSE167363 | 10x Genomics (single cell) | CD14+ monocytes | **Single-cell** sepsis vs healthy: subpopulation annotation, CellChat, pseudotime, AUCell, virtual knockout | 12,359 cells; 5 samples (2 healthy, 2 sepsis with one sampled twice) | QC-failed cells / doublets |
 | GSE65682 | GPL13667 (Affymetrix HG-U219) | Whole blood | **Prognosis only** (28-day mortality; the only cohort with a survival endpoint) | 479 septic-shock patients after de-duplication (114 deaths, 23.8%) | Duplicate draws from the same patient; 8 of 179 candidate genes not represented on the platform |
@@ -75,8 +75,15 @@ Cohort-level metadata (ancestry, sampling time, exclusions) are tabulated in
 
 ## 5. Provenance caveats
 
-- Ancestry and sampling-time annotation is incomplete for GSE76293, GSE69528, and GSE100159 in the
-  local series records; this is disclosed in Supplementary Methods S1 and in Supplementary Table S26.
+- Sampling time and ancestry were re-verified against the GEO series records and the source
+  publications on 2026-11-04. Sampling time: GSE65682 at ICU admission; GSE243066 within 24 h of
+  admission; GSE151263 within 24 h of intubation; GSE167363 within 6 h of diagnosis (paired 0 h / 6 h);
+  GSE76293 within 48 h of diagnosis (source publication); GSE69528 blood drawn at Khon Kaen Regional
+  Hospital, Thailand, in 2007-2008 (relative timing not stated); GSE100159 has no sampling time point
+  in the GEO record. Ancestry is not annotated in any of the seven GEO series records; the single
+  source-publication statement is that all GSE69528 subjects were Asian. GSE65682 is predominantly
+  White (86% of the published MARS cohort). These disclosures appear in Supplementary Methods S1 and
+  Supplementary Table S26.
 - Exact per-file download dates were not captured for the GEO series matrices and GWAS summary
   statistics. Where known they are given above; otherwise the entry reads `not recorded`
   rather than an inferred date.
