@@ -61,7 +61,7 @@ Cohort-level metadata (ancestry, sampling time, exclusions) are tabulated in
 
 - `analysis/` — 217 scripts (R / Python / shell), plus `run_all.sh` driving 17 stages mapped to Supplementary Methods S1–S14.
 - `results/` — 369 derived numeric outputs (CSV / TXT / XLSX) organised by the 13 analysis modules.
-- `manuscript/` — removed (2026-11-03): contained author-identifying personal information; not redistributed here.
+- `manuscript/` — the submitted manuscript and supplements (restored 2026-11-05): revised main text, Chinese translation, Supplementary Methods/Materials, At-a-Glance Commentary (Markdown + DOCX), modification log, GEO cohort-metadata verification note, and `supplementary_tables/` (all tables as submitted). The cover letter is not redistributed.
 - `environment/` — interpreter versions and the package inventory extracted from the scripts.
 - `DATA_INVENTORY.md` / `DATA_INVENTORY.csv`, `FETCH_PUBLIC_DATA.md`, `RESULTS_TO_CODE.md`, `METHODS_TO_CODE.md`, `PATHS.md`, `MANIFEST.txt`, `code_archive.zip`.
 

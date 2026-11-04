@@ -1,0 +1,15 @@
+block,item,statistic,value,note
+A,"Cox PH assumption, GLOBAL (six-gene joint model)",chi-square; df; P,13.87; 6; 0.031,Global test rejects proportionality; the joint estimate is a time-averaged effect.
+A,"Cox PH assumption, CDK5RAP2",chi-square; df; P,1.27; 1; 0.259,No single gene violates proportionality at P<0.05.
+A,"Cox PH assumption, CD177",chi-square; df; P,0.32; 1; 0.570,No single gene violates proportionality at P<0.05.
+A,"Cox PH assumption, GRB10",chi-square; df; P,0.06; 1; 0.801,No single gene violates proportionality at P<0.05.
+A,"Cox PH assumption, UPP1",chi-square; df; P,0.10; 1; 0.749,No single gene violates proportionality at P<0.05.
+A,"Cox PH assumption, EXOSC4",chi-square; df; P,3.63; 1; 0.057,No single gene violates proportionality at P<0.05.
+A,"Cox PH assumption, VNN1",chi-square; df; P,1.09; 1; 0.296,No single gene violates proportionality at P<0.05.
+B,KM cut-point scheme: continuous risk score,HR (95% CI); log-rank P,2.72 (1.53 to 4.83); 0.00065,n groups = NA
+B,KM cut-point scheme: binary at median,HR (95% CI); log-rank P,1.82 (1.25 to 2.66); 0.00190,n groups = 2
+B,"KM cut-point scheme: tertile extremes (low vs high, mid dropped)",HR (95% CI); log-rank P,2.43 (1.51 to 3.90); 0.00026,n groups = 2
+B,"KM cut-point scheme: quartile extremes (low vs high, mid dropped)",HR (95% CI); log-rank P,2.38 (1.39 to 4.06); 0.00152,n groups = 2
+B,KM cut-point scheme: tertile 3-group log-rank (trend),HR (95% CI); log-rank P,NA (NA to NA); 0.00049,n groups = 3
+C,"ssGSEA lineage-marker comparison, GSE76293 (ARDS)",cell types tested; nominal P<0.05; BH-adjusted P<0.05,18; 9; 7,Benjamini-Hochberg applied across the tested cell types within each cohort.
+C,"ssGSEA lineage-marker comparison, GSE69528 (sepsis)",cell types tested; nominal P<0.05; BH-adjusted P<0.05,17; 15; 15,Benjamini-Hochberg applied across the tested cell types within each cohort.

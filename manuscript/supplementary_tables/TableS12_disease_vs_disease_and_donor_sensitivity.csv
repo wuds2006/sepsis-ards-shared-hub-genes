@@ -1,0 +1,74 @@
+section,item,subtype,AUC,P,dataset,pathway,celltype,donor,group,value,n_cells
+patient_level_ROC,CDK5RAP2,single,0.417,0.857,,,,,,,
+patient_level_ROC,CD177,single,0.5,1.0,,,,,,,
+patient_level_ROC,GRB10,single,0.667,0.629,,,,,,,
+patient_level_ROC,UPP1,single,0.333,0.629,,,,,,,
+patient_level_ROC,EXOSC4,single,0.333,0.629,,,,,,,
+patient_level_ROC,VNN1,single,0.75,0.4,,,,,,,
+patient_level_ROC,Combined_signature,signature,0.5,1.0,,,,,,,
+donor_level_sensitivity,pseudotime,,,,GSE151263,,,1,Sepsis,11.13794583499525,1998.0
+donor_level_sensitivity,pseudotime,,,,GSE151263,,,2,Sepsis,3.735043181395215,2000.0
+donor_level_sensitivity,pseudotime,,,,GSE151263,,,3,Sepsis,10.5811347019212,1998.0
+donor_level_sensitivity,pseudotime,,,,GSE151263,,,4,Sepsis,3.0333989472007303,2000.0
+donor_level_sensitivity,pseudotime,,,,GSE151263,,,5,ARDS,3.73108100664906,2000.0
+donor_level_sensitivity,pseudotime,,,,GSE151263,,,6,ARDS,7.852653327671215,2000.0
+donor_level_sensitivity,pseudotime,,,,GSE151263,,,7,ARDS,9.356858823080806,2000.0
+donor_level_sensitivity,pseudotime,,,,GSE167363,,,HC1,HC,3.059450683056495,2474.0
+donor_level_sensitivity,pseudotime,,,,GSE167363,,,HC2,HC,1.77523895342879,2472.0
+donor_level_sensitivity,pseudotime,,,,GSE167363,,,S2,Sepsis,5.145783001689139,4940.0
+donor_level_sensitivity,pseudotime,,,,GSE167363,,,S3,Sepsis,1.73590557558051,2473.0
+donor_level_sensitivity,UPP1_program,,,,GSE151263,,Mono,1,Sepsis,0.7609832338732595,264.0
+donor_level_sensitivity,UPP1_program,,,,GSE151263,,Mono,2,Sepsis,0.7424552429667519,834.0
+donor_level_sensitivity,UPP1_program,,,,GSE151263,,Mono,3,Sepsis,0.577701998673866,201.0
+donor_level_sensitivity,UPP1_program,,,,GSE151263,,Mono,4,Sepsis,0.687505920242493,1115.0
+donor_level_sensitivity,UPP1_program,,,,GSE151263,,Mono,5,ARDS,0.5397840295538505,468.0
+donor_level_sensitivity,UPP1_program,,,,GSE151263,,Mono,6,ARDS,0.6723690442360519,524.0
+donor_level_sensitivity,UPP1_program,,,,GSE151263,,Mono,7,ARDS,0.6862934545798995,644.0
+donor_level_sensitivity,UPP1_program,,,,GSE167363,,all_mono,HC1,HC,0.138339678251259,2474.0
+donor_level_sensitivity,UPP1_program,,,,GSE167363,,all_mono,HC2,HC,0.149320479757665,2472.0
+donor_level_sensitivity,UPP1_program,,,,GSE167363,,all_mono,S2,Sepsis,0.1092656269188259,4940.0
+donor_level_sensitivity,UPP1_program,,,,GSE167363,,all_mono,S3,Sepsis,0.702648491546932,2473.0
+donor_level_sensitivity,metabolism,,,,GSE151263,Glycolysis,,ARDS1,ARDS,0.055651056309867,
+donor_level_sensitivity,metabolism,,,,GSE151263,Glycolysis,,ARDS2,ARDS,0.0372140965624454,
+donor_level_sensitivity,metabolism,,,,GSE151263,Glycolysis,,ARDS3,ARDS,0.0527301597045777,
+donor_level_sensitivity,metabolism,,,,GSE151263,Glycolysis,,Sepsis1,Sepsis,0.0503315905855389,
+donor_level_sensitivity,metabolism,,,,GSE151263,Glycolysis,,Sepsis2,Sepsis,0.0591024879056354,
+donor_level_sensitivity,metabolism,,,,GSE151263,Glycolysis,,Sepsis3,Sepsis,0.0638173852398203,
+donor_level_sensitivity,metabolism,,,,GSE151263,Glycolysis,,Sepsis4,Sepsis,0.069352917287225,
+donor_level_sensitivity,metabolism,,,,GSE151263,Oxidative phosphorylation,,ARDS1,ARDS,0.2053203554135103,
+donor_level_sensitivity,metabolism,,,,GSE151263,Oxidative phosphorylation,,ARDS2,ARDS,0.1194383690691741,
+donor_level_sensitivity,metabolism,,,,GSE151263,Oxidative phosphorylation,,ARDS3,ARDS,0.1677086350686681,
+donor_level_sensitivity,metabolism,,,,GSE151263,Oxidative phosphorylation,,Sepsis1,Sepsis,0.1361122831822881,
+donor_level_sensitivity,metabolism,,,,GSE151263,Oxidative phosphorylation,,Sepsis2,Sepsis,0.1852498562862004,
+donor_level_sensitivity,metabolism,,,,GSE151263,Oxidative phosphorylation,,Sepsis3,Sepsis,0.2299723675258215,
+donor_level_sensitivity,metabolism,,,,GSE151263,Oxidative phosphorylation,,Sepsis4,Sepsis,0.193470251406129,
+donor_level_sensitivity,metabolism,,,,GSE151263,Fatty acid metabolism,,ARDS1,ARDS,0.08562750583699,
+donor_level_sensitivity,metabolism,,,,GSE151263,Fatty acid metabolism,,ARDS2,ARDS,0.0669719798976204,
+donor_level_sensitivity,metabolism,,,,GSE151263,Fatty acid metabolism,,ARDS3,ARDS,0.0775467230308884,
+donor_level_sensitivity,metabolism,,,,GSE151263,Fatty acid metabolism,,Sepsis1,Sepsis,0.0727057690394526,
+donor_level_sensitivity,metabolism,,,,GSE151263,Fatty acid metabolism,,Sepsis2,Sepsis,0.102473454252865,
+donor_level_sensitivity,metabolism,,,,GSE151263,Fatty acid metabolism,,Sepsis3,Sepsis,0.0933963627067427,
+donor_level_sensitivity,metabolism,,,,GSE151263,Fatty acid metabolism,,Sepsis4,Sepsis,0.0932691147645611,
+donor_level_sensitivity,metabolism,,,,GSE151263,Xenobiotic metabolism,,ARDS1,ARDS,0.007025140457762,
+donor_level_sensitivity,metabolism,,,,GSE151263,Xenobiotic metabolism,,ARDS2,ARDS,0.0164073617302285,
+donor_level_sensitivity,metabolism,,,,GSE151263,Xenobiotic metabolism,,ARDS3,ARDS,0.0219571323450941,
+donor_level_sensitivity,metabolism,,,,GSE151263,Xenobiotic metabolism,,Sepsis1,Sepsis,0.0144311229277622,
+donor_level_sensitivity,metabolism,,,,GSE151263,Xenobiotic metabolism,,Sepsis2,Sepsis,0.0419162082794602,
+donor_level_sensitivity,metabolism,,,,GSE151263,Xenobiotic metabolism,,Sepsis3,Sepsis,0.0027319768735446,
+donor_level_sensitivity,metabolism,,,,GSE151263,Xenobiotic metabolism,,Sepsis4,Sepsis,0.0411980520317916,
+donor_level_sensitivity,metabolism,,,,GSE167363,Glycolysis,,HC1,HC,0.0328118648787681,
+donor_level_sensitivity,metabolism,,,,GSE167363,Glycolysis,,HC2,HC,0.038151906417589,
+donor_level_sensitivity,metabolism,,,,GSE167363,Glycolysis,,S2,Sepsis,0.0467110221168858,
+donor_level_sensitivity,metabolism,,,,GSE167363,Glycolysis,,S3,Sepsis,0.064004354016853,
+donor_level_sensitivity,metabolism,,,,GSE167363,Oxidative phosphorylation,,HC1,HC,0.2019690628383353,
+donor_level_sensitivity,metabolism,,,,GSE167363,Oxidative phosphorylation,,HC2,HC,0.1957946803460933,
+donor_level_sensitivity,metabolism,,,,GSE167363,Oxidative phosphorylation,,S2,Sepsis,0.187844062704086,
+donor_level_sensitivity,metabolism,,,,GSE167363,Oxidative phosphorylation,,S3,Sepsis,0.3216433024625658,
+donor_level_sensitivity,metabolism,,,,GSE167363,Fatty acid metabolism,,HC1,HC,0.041667528426542,
+donor_level_sensitivity,metabolism,,,,GSE167363,Fatty acid metabolism,,HC2,HC,0.0579353905398779,
+donor_level_sensitivity,metabolism,,,,GSE167363,Fatty acid metabolism,,S2,Sepsis,0.0491989958605242,
+donor_level_sensitivity,metabolism,,,,GSE167363,Fatty acid metabolism,,S3,Sepsis,0.0999680126449623,
+donor_level_sensitivity,metabolism,,,,GSE167363,Xenobiotic metabolism,,HC1,HC,-0.009068692264578,
+donor_level_sensitivity,metabolism,,,,GSE167363,Xenobiotic metabolism,,HC2,HC,-0.0042370196904295,
+donor_level_sensitivity,metabolism,,,,GSE167363,Xenobiotic metabolism,,S2,Sepsis,0.0008154795548979,
+donor_level_sensitivity,metabolism,,,,GSE167363,Xenobiotic metabolism,,S3,Sepsis,0.0457615961453769,

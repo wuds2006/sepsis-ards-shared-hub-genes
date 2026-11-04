@@ -1,0 +1,15 @@
+gene,nomination_list,AUC_GSE76293_ARDS_discovery,P_GSE76293,AUC_GSE69528_Sepsis_discovery,P_GSE69528,cross_disease_screen_pass
+CDK5RAP2,ARDS_candidate,1.0,7.4e-07,0.844,6.92e-09,pass
+CD177,ARDS_candidate,1.0,7.4e-07,0.964,2.22e-16,pass
+GRB10,ARDS_candidate,1.0,7.4e-07,0.948,6.66e-16,pass
+UPP1,ARDS_candidate,1.0,7.4e-07,0.979,2.22e-16,pass
+EXOSC4,ARDS_candidate,1.0,7.4e-07,0.959,2.22e-16,pass
+VNN1,ARDS_candidate,1.0,7.4e-07,0.946,2.22e-16,pass
+DYRK2,ARDS_candidate,0.0,7.4e-07,0.054,3.39e-16,direction_reversed_or_fail
+TCTN1,ARDS_candidate Sepsis_candidate,0.0,7.4e-07,0.017,2.22e-16,direction_reversed_or_fail
+MUC1,ARDS_candidate,1.0,7.4e-07,0.895,6.17e-12,pass
+METTL9, Sepsis_candidate,1.0,7.4e-07,0.97,2.22e-16,pass
+MTHFD2, Sepsis_candidate,0.993,1.48e-06,0.976,2.22e-16,pass
+BATF, Sepsis_candidate,0.979,5.18e-06,0.966,2.22e-16,pass
+PLP2, Sepsis_candidate,0.979,5.18e-06,0.965,2.22e-16,pass
+ZSCAN18, Sepsis_candidate,0.056,4.96e-05,0.021,2.22e-16,direction_reversed_or_fail
