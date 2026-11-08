@@ -1637,3 +1637,38 @@ Zenodo 监听 GitHub **Release 发布**事件，故需在网页对 tag v1.1.0 �
 **编号勘误（2026-11-08 二次核对）**：落盘时曾误判补充图最大编号为 S23、S24/S25 为空号，据此把两张新图编为 S24/S25；随后核对 Desktop 投稿包发现 S22–S26 均已存在（S24=CIBERSORT、S25=luteolin、S26=ETosis 旧版），该判断错误。已全部回改：ETosis 图沿用 **Figure S26**（旧版被本轮重绘版覆盖，修正 C 面板口径），hdWGCNA 图取 **Figure S27**；正文、中文译文、补充材料、图纸文件与脚本名同步更正，Table S27（虚拟敲除富集）不受影响。
 
 **主图文件轮换勘误（2026-11-08 二次核对）**：R2 的图号循环在文件层首次执行时方向写反（得到 新7=旧9、新8=旧7、新9=旧8），且 Desktop 投稿包 `Figures/main/` 未同步重命名。已按 `_pre_renumber/` 备份重建为目标映射（新7=旧8 免疫、新8=旧9 单细胞、新9=旧7 MR），Desktop 四格式同步；并以 SVG 文本关键词与正文内嵌图逐张复核通过。
+
+## 第十九批 · 代码仓重构、Zenodo v1.2.0 归档与补充表计数勘误（2026-11-08）
+
+### 代码仓重构与远端替换
+
+旧归档仓（`analysis/` 216 个平铺脚本 + `results/` 369 表 + 4 次提交 + v1.0.0/v1.1.0 两个 tag）整体备份为 `repo_backup_2026-10-30/`，由重构后的仓库接管：`analysis/` 拆为 `R/` + `python/` + `shell/`，`results/` 改为 `data/frozen/`（13 模块 421 表），另设 `docs/`、`environment/`、`manuscript/`。远端 `main` 用新历史覆盖（`b0a214a` → `3dbcc47`）。旧仓独有材料按 11-08 版本重建后迁入，确保新仓为远端内容的超集。
+
+### Zenodo v1.2.0 归档（自动完成）
+
+`v1.2.0` 注释标签（指向 `3dbcc47`）推送后，Zenodo 的 GitHub 钩子在约 4 分钟内自动生成版本记录，**无需手工发布 release**：
+
+| 项目 | 值 |
+|---|---|
+| 版本 DOI | `10.5281/zenodo.24048653` |
+| 概念 DOI | `10.5281/zenodo.23668532`（始终指向最新版） |
+| 记录 | recid 24048653，公开状态 `published`，1.2.0，2026-11-08 |
+| 归档文件 | `sepsis-ards-shared-hub-genes-v1.2.0.zip`，60.8 MB，md5 `b580d357…` |
+
+版本序列现有两条：`v1.0.0`（recid 23668533，2026-10-26，19.2 MB）与 `1.2.0`（recid 24048653）。**v1.1.0 没有对应 Zenodo 记录**——该 tag 当时未推送或未触发钩子，其内容已包含在 1.2.0 中，无需补档。
+
+### 补充表计数勘误：27 → 28
+
+Data Availability 末段原写 "all 27 supplementary tables as submitted"，是 Table S28（ETosis 与 NOX 基因集清单）加入之前的旧计数。实际提交 **28 张**（Table S1–S28；文件 29 个，因 S23 拆为 `TableS23_lasso_prognostic_signature.csv` 与 `TableS23b_penalty_comparison.csv`）。
+
+改后：`all 28 supplementary tables (Tables S1–S28) as submitted`（+3 词；Data Availability 不计入正文字数，正文仍为 3,495）。同步：`02_Manuscript_Revised.md`、`03_Manuscript_Translation_CN.md`（"27 份补充表"→"28 份补充表（表 S1–S28）"）、投稿包 `Manuscript_Submission.docx`（run 层替换，未动段落格式）。
+
+### CITATION.cff 补 DOI
+
+新增 `identifiers` 三条：版本 DOI `10.5281/zenodo.24048653`（Version 1.2.0）、概念 DOI `10.5281/zenodo.23668532`（始终解析到最新版）、仓库 URL。此前仅有 `repository-code`，GitHub 的 "Cite this repository" 拿不到 DOI。
+
+### Zenodo 登录故障（复诊）
+
+作者报"Zenodo 网站登录不了"。复测：`zenodo.org/login/` 返回 200、DOI 解析 302 正常，`/etc/hosts` 中 2026-10-26 追加的三条直连记录仍在；**`github.com/login/oauth/authorize` 超时 20 s 无响应（HTTP 000），而 `orcid.org` 全部 200**。即登录页能打开，但点"Sign in with GitHub"后卡在 OAuth 跳转。与 10-26 的 DNS 污染不是同一原因（那次是整站打不开）。
+
+处置：本次归档不需要登录 Zenodo，未做任何网络改动。若日后需在网页端编辑记录元数据，可改用 ORCID 登录（需先在账号内绑定），或改走手机热点。

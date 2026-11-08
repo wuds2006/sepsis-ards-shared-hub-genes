@@ -29,6 +29,15 @@ version: 1.2.0
 date-released: "2026-11-08"
 license: MIT
 repository-code: "https://github.com/wuds2006/sepsis-ards-shared-hub-genes"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.24048653"
+    description: "Version 1.2.0"
+  - type: doi
+    value: "10.5281/zenodo.23668532"
+    description: "Concept DOI; always resolves to the latest version"
+  - type: url
+    value: "https://github.com/wuds2006/sepsis-ards-shared-hub-genes"
 abstract: >-
   Analysis code and derived result tables for the shared hub-gene and
   immune-signature study of sepsis and ARDS, covering bulk transcriptomic
