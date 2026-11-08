@@ -34,7 +34,7 @@ panel_a <- function() {
              label = sprintf("selected power = %d (R\u00b2 = %.2f)", SEL_POWER, r2),
              size = PT_BODY / .pt, family = FONT_BODY, colour = pal[["ink"]]) +
     scale_x_continuous(breaks = c(1, seq(5, 30, by = 5))) +
-    labs(x = "Soft-threshold power", y = expression("Scale-free fit (" * R^2 * ")")) +
+    labs(x = "Soft-threshold power", y = "Scale-free fit (R\u00b2)") +
     theme_ajr()
 }
 
@@ -56,15 +56,14 @@ panel_b <- function() {
               colour = pal[["ink"]]) +
     scale_fill_manual(values = col, name = NULL,
                       breaks = c("not variable", "turquoise", "unassigned")) +
-    guides(fill = guide_legend(nrow = 1, byrow = TRUE)) +
+    guides(fill = guide_legend(nrow = 2, byrow = TRUE)) +
     scale_x_continuous(limits = c(0, 0.86), breaks = c(0, 0.25, 0.50, 0.75),
                        expand = expansion(mult = c(0, 0.01))) +
     labs(x = "Module membership (kME)", y = NULL) +
     theme_ajr() +
     theme(legend.position = "bottom", legend.margin = margin(-3, 0, 0, 0),
           legend.key.size = unit(2.4, "mm"),
-          legend.text = element_text(size = PT_SMALL),
-          legend.spacing.x = unit(1.4, "mm"))
+          legend.spacing.x = unit(1.2, "mm"))
 }
 
 # --- panel C: module eigengene versus sepsis status -------------------------
