@@ -1,0 +1,8 @@
+"gene","top_cell","top_nTPM","specificity_ratio"
+"CD177","neutrophil",8.8,0.765
+"CDK5RAP2","NK-cell",2,0.12
+"EXOSC4","plasmacytoid DC",90.9,0.102
+"GRB10","basophil",10.1,0.697
+"UPP1","classical monocyte",16,0.101
+"VNN1","classical monocyte",13.7,0.252
+"VNN2","neutrophil",479.1,0.537

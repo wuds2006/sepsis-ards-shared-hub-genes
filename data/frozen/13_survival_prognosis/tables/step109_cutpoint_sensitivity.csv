@@ -1,0 +1,6 @@
+"scheme","n_groups","HR","lo","hi","P"
+"continuous risk score",NA,2.718,1.53,4.829,0.000649
+"binary at median",2,1.822,1.248,2.662,0.0019
+"tertile extremes (low vs high, mid dropped)",2,2.426,1.508,3.905,0.000261
+"quartile extremes (low vs high, mid dropped)",2,2.376,1.392,4.056,0.00152
+"tertile 3-group log-rank (trend)",3,NA,NA,NA,0.000492

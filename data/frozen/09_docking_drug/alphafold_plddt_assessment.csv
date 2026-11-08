@@ -1,0 +1,5 @@
+gene,structure,n_residues,mean_pLDDT,median_pLDDT,pct_pLDDT_ge70,pct_pLDDT_ge90,n_residues_in_box,box_mean_pLDDT,box_median_pLDDT,box_pct_pLDDT_ge70,box_pct_pLDDT_ge90
+CDK5RAP2,CDK5RAP2_Q96SN8.pdb,1893,59.1,63.3,46.7,2.8,38,73.5,80.8,76.3,2.6
+CD177,CD177_Q8N6Q3.pdb,437,85.2,93.2,84.9,67.0,72,90.5,93.1,97.2,69.4
+GRB10,GRB10_Q13322.pdb,594,73.9,88.5,62.8,47.5,105,94.2,95.4,99.0,88.6
+EXOSC4,EXOSC4_Q9NPD3.pdb,245,90.2,92.6,97.1,70.6,141,93.7,94.2,100.0,93.6

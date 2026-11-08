@@ -1,0 +1,48 @@
+# 原始数据与中间结果不入库
+/00_rawdata/
+*.h5ad
+*.loom
+*.rds
+!data/frozen/**/*.rds
+
+# Figure S25 的对接中间产物（由 26–29 号脚本重新生成）
+/R/figures/_figS25_work/
+
+# 对接输入不随仓库分发，用 DOCK_ROOT 指向本地目录
+/09_docking_drug/docking_site/
+/09_docking_drug/ligands/
+/09_docking_drug/cocrystal/
+
+# 分析阶段的输出目录（重跑会重建）
+/00_*/
+/01_DEG/
+/02_WGCNA/
+/03_intersection/
+/04_MR_SMR/
+/05_ML_SHAP/
+/06_external_validation/
+/07_hub_immune/
+/08_singlecell/
+/09_docking_drug/
+/10_HPA_validation/
+/11_network_pharma/
+/12_single_gene_gsea/
+/13_survival_prognosis/
+/monocle3/
+/celloracle/
+/docking/
+
+# 系统与临时文件
+.DS_Store
+Thumbs.db
+Rplots.pdf
+.Rhistory
+.RData
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+
+# 编辑器
+.vscode/
+.idea/

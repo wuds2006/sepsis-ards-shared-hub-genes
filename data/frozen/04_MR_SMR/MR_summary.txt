@@ -1,0 +1,9 @@
+MR (细菌感染AB1_OTHER_BACTERIAL 暴露 -> ARDS J10_ARDS 结局):
+- 工具变量: 484个全基因组显著SNP -> 距离clumping(1Mb)后 9个
+- IVW: b=-0.306, se=0.672, p=0.649 (不显著)
+- MR-Egger: b=-0.646, se=1.351, p=0.647 (不显著)
+- Weighted median: b=-0.466, se=0.906, p=0.607 (不显著)
+- Weighted mode: b=-0.695, se=1.430, p=0.640 (不显著)
+结论: 未发现细菌感染(脓毒症代理)对ARDS的显著因果效应。
+局限: 暴露与结局同源(FinnGen)存在样本重叠; ARDS病例少(431); 仅9个工具变量;
+      细菌感染为脓毒症代理(非精确sepsis)。

@@ -1,0 +1,95 @@
+sample,source_name,title,group
+GSM1979240,PMNs from ARDS patient,ARDS_01,ARDS
+GSM1979241,PMNs from HVT,HVT_01,Control
+GSM1979242,PMNs from ARDS patient,ARDS_02,ARDS
+GSM1979243,PMNs from HVT,HVT_02,Control
+GSM1979244,PMNs from ARDS patient,ARDS_03,ARDS
+GSM1979245,PMNs from HVT,HVT_03,Control
+GSM1979246,PMNs from ARDS patient,ARDS_04,ARDS
+GSM1979247,PMNs from HVT,HVT_04,Control
+GSM1979248,PMNs from ARDS patient,ARDS_05,ARDS
+GSM1979249,PMNs from HVT,HVT_05,Control
+GSM1979250,PMNs from ARDS patient,ARDS_06,ARDS
+GSM1979251,PMNs from HVT,HVT_06,Control
+GSM1979252,PMNs from ARDS patient,ARDS_07,ARDS
+GSM1979253,PMNs from HVT,HVT_07,Control
+GSM1979254,PMNs from ARDS patient,ARDS_08,ARDS
+GSM1979255,PMNs from HVT,HVT_08,Control
+GSM1979256,PMNs from ARDS patient,ARDS_09,ARDS
+GSM1979257,PMNs from HVT,HVT_09,Control
+GSM1979258,PMNs from ARDS patient,ARDS_10,ARDS
+GSM1979259,PMNs from HVT,HVT_10,Control
+GSM1979260,Cultured PMNs from HVT, DMSO, t=0,Fresh_01,EXCLUDE_cultured
+GSM1979261,Cultured PMNs from HVT, DMSO, t=6,Vehicle_01,EXCLUDE_cultured
+GSM1979262,Cultured PMNs from HVT + panPI3K Inhibitor, t=6h,PanPI3K_01,EXCLUDE_cultured
+GSM1979263,Cultured PMNs from HVT + GM-CSF, t=6h,GM-CSF_01,EXCLUDE_cultured
+GSM1979264,Cultured PMNs from HVT + GM-CSF + PanPI3K Inhibitor, t=6h,GM-CSF + PanPI3K_01,EXCLUDE_cultured
+GSM1979265,Cultured PMNs from HVT + GM-CSF + PI3Kd Inhibitor, t=6h,GM-CSF + PI3Kd_01,EXCLUDE_cultured
+GSM1979266,Cultured PMNs from HVT + GM-CSF + PI3Kg Inhibitor, t=6h,GM-CSF + PI3Kg_01,EXCLUDE_cultured
+GSM1979267,Cultured PMNs from HVT, DMSO, t=0,Fresh_02,EXCLUDE_cultured
+GSM1979268,Cultured PMNs from HVT, DMSO, t=6,Vehicle_02,EXCLUDE_cultured
+GSM1979269,Cultured PMNs from HVT + panPI3K Inhibitor, t=6h,PanPI3K_02,EXCLUDE_cultured
+GSM1979270,Cultured PMNs from HVT + GM-CSF, t=6h,GM-CSF_02,EXCLUDE_cultured
+GSM1979271,Cultured PMNs from HVT + GM-CSF + PanPI3K Inhibitor, t=6h,GM-CSF + PanPI3K_02,EXCLUDE_cultured
+GSM1979272,Cultured PMNs from HVT + GM-CSF + PI3Kd Inhibitor, t=6h,GM-CSF + PI3Kd_02,EXCLUDE_cultured
+GSM1979273,Cultured PMNs from HVT + GM-CSF + PI3Kg Inhibitor, t=6h,GM-CSF + PI3Kg_02,EXCLUDE_cultured
+GSM1979274,Cultured PMNs from HVT, DMSO, t=0,Fresh_03,EXCLUDE_cultured
+GSM1979275,Cultured PMNs from HVT, DMSO, t=6,Vehicle_03,EXCLUDE_cultured
+GSM1979276,Cultured PMNs from HVT + panPI3K Inhibitor, t=6h,PanPI3K_03,EXCLUDE_cultured
+GSM1979277,Cultured PMNs from HVT + GM-CSF, t=6h,GM-CSF_03,EXCLUDE_cultured
+GSM1979278,Cultured PMNs from HVT + GM-CSF + PanPI3K Inhibitor, t=6h,GM-CSF + PanPI3K_03,EXCLUDE_cultured
+GSM1979279,Cultured PMNs from HVT + GM-CSF + PI3Kd Inhibitor, t=6h,GM-CSF + PI3Kd_03,EXCLUDE_cultured
+GSM1979280,Cultured PMNs from HVT + GM-CSF + PI3Kg Inhibitor, t=6h,GM-CSF + PI3Kg_03,EXCLUDE_cultured
+GSM1979281,Cultured PMNs from HVT, DMSO, t=0,Fresh_04,EXCLUDE_cultured
+GSM1979282,Cultured PMNs from HVT, DMSO, t=6,Vehicle_04,EXCLUDE_cultured
+GSM1979283,Cultured PMNs from HVT + panPI3K Inhibitor, t=6h,PanPI3K_04,EXCLUDE_cultured
+GSM1979284,Cultured PMNs from HVT + GM-CSF, t=6h,GM-CSF_04,EXCLUDE_cultured
+GSM1979285,Cultured PMNs from HVT + GM-CSF + PanPI3K Inhibitor, t=6h,GM-CSF + PanPI3K_04,EXCLUDE_cultured
+GSM1979286,Cultured PMNs from HVT + GM-CSF + PI3Kd Inhibitor, t=6h,GM-CSF + PI3Kd_04,EXCLUDE_cultured
+GSM1979287,Cultured PMNs from HVT + GM-CSF + PI3Kg Inhibitor, t=6h,GM-CSF + PI3Kg_04,EXCLUDE_cultured
+GSM1979288,Cultured PMNs from HVT, DMSO, t=0,Fresh_05,EXCLUDE_cultured
+GSM1979289,Cultured PMNs from HVT, DMSO, t=6,Vehicle_05,EXCLUDE_cultured
+GSM1979290,Cultured PMNs from HVT + panPI3K Inhibitor, t=6h,PanPI3K_05,EXCLUDE_cultured
+GSM1979291,Cultured PMNs from HVT + GM-CSF, t=6h,GM-CSF_05,EXCLUDE_cultured
+GSM1979292,Cultured PMNs from HVT + GM-CSF + PanPI3K Inhibitor, t=6h,GM-CSF + PanPI3K_05,EXCLUDE_cultured
+GSM1979293,Cultured PMNs from HVT + GM-CSF + PI3Kd Inhibitor, t=6h,GM-CSF + PI3Kd_05,EXCLUDE_cultured
+GSM1979294,Cultured PMNs from HVT + GM-CSF + PI3Kg Inhibitor, t=6h,GM-CSF + PI3Kg_05,EXCLUDE_cultured
+GSM1979295,Cultured PMNs from HVT, DMSO, t=0,Fresh_06,EXCLUDE_cultured
+GSM1979296,Cultured PMNs from HVT, DMSO, t=6,Vehicle_06,EXCLUDE_cultured
+GSM1979297,Cultured PMNs from HVT + panPI3K Inhibitor, t=6h,PanPI3K_06,EXCLUDE_cultured
+GSM1979298,Cultured PMNs from HVT + GM-CSF, t=6h,GM-CSF_06,EXCLUDE_cultured
+GSM1979299,Cultured PMNs from HVT + GM-CSF + PanPI3K Inhibitor, t=6h,GM-CSF + PanPI3K_06,EXCLUDE_cultured
+GSM1979300,Cultured PMNs from HVT + GM-CSF + PI3Kd Inhibitor, t=6h,GM-CSF + PI3Kd_06,EXCLUDE_cultured
+GSM1979301,Cultured PMNs from HVT + GM-CSF + PI3Kg Inhibitor, t=6h,GM-CSF + PI3Kg_06,EXCLUDE_cultured
+GSM1979302,Cultured PMNs from HVT, DMSO, t=0,Fresh_07,EXCLUDE_cultured
+GSM1979303,Cultured PMNs from HVT, DMSO, t=6,Vehicle_07,EXCLUDE_cultured
+GSM1979304,Cultured PMNs from HVT + panPI3K Inhibitor, t=6h,PanPI3K_07,EXCLUDE_cultured
+GSM1979305,Cultured PMNs from HVT + GM-CSF, t=6h,GM-CSF_07,EXCLUDE_cultured
+GSM1979306,Cultured PMNs from HVT + GM-CSF + PanPI3K Inhibitor, t=6h,GM-CSF + PanPI3K_07,EXCLUDE_cultured
+GSM1979307,Cultured PMNs from HVT + GM-CSF + PI3Kd Inhibitor, t=6h,GM-CSF + PI3Kd_07,EXCLUDE_cultured
+GSM1979308,Cultured PMNs from HVT + GM-CSF + PI3Kg Inhibitor, t=6h,GM-CSF + PI3Kg_07,EXCLUDE_cultured
+GSM1979309,Cultured PMNs from HVT, DMSO, t=0,Fresh_08,EXCLUDE_cultured
+GSM1979310,Cultured PMNs from HVT, DMSO, t=6,Vehicle_08,EXCLUDE_cultured
+GSM1979311,Cultured PMNs from HVT + panPI3K Inhibitor, t=6h,PanPI3K_08,EXCLUDE_cultured
+GSM1979312,Cultured PMNs from HVT + GM-CSF, t=6h,GM-CSF_08,EXCLUDE_cultured
+GSM1979313,Cultured PMNs from HVT + GM-CSF + PanPI3K Inhibitor, t=6h,GM-CSF + PanPI3K_08,EXCLUDE_cultured
+GSM1979314,Cultured PMNs from HVT + GM-CSF + PI3Kd Inhibitor, t=6h,GM-CSF + PI3Kd_08,EXCLUDE_cultured
+GSM1979315,Cultured PMNs from HVT + GM-CSF + PI3Kg Inhibitor, t=6h,GM-CSF + PI3Kg_08,EXCLUDE_cultured
+GSM1979316,Cultured PMNs from HVT, DMSO, t=0,Fresh_09,EXCLUDE_cultured
+GSM1979317,Cultured PMNs from HVT, DMSO, t=6,Vehicle_09,EXCLUDE_cultured
+GSM1979318,Cultured PMNs from HVT + panPI3K Inhibitor, t=6h,PanPI3K_09,EXCLUDE_cultured
+GSM1979319,Cultured PMNs from HVT + GM-CSF, t=6h,GM-CSF_09,EXCLUDE_cultured
+GSM1979320,Cultured PMNs from HVT + GM-CSF + PanPI3K Inhibitor, t=6h,GM-CSF + PanPI3K_09,EXCLUDE_cultured
+GSM1979321,Cultured PMNs from HVT + GM-CSF + PI3Kd Inhibitor, t=6h,GM-CSF + PI3Kd_09,EXCLUDE_cultured
+GSM1979322,Cultured PMNs from HVT + GM-CSF + PI3Kg Inhibitor, t=6h,GM-CSF + PI3Kg_09,EXCLUDE_cultured
+GSM1979323,Cultured PMNs from HVT, DMSO, t=0,Fresh_10,EXCLUDE_cultured
+GSM1979324,Cultured PMNs from HVT, DMSO, t=6,Vehicle_10,EXCLUDE_cultured
+GSM1979325,Cultured PMNs from HVT + panPI3K Inhibitor, t=6h,PanPI3K_10,EXCLUDE_cultured
+GSM1979326,Cultured PMNs from HVT + GM-CSF, t=6h,GM-CSF_10,EXCLUDE_cultured
+GSM1979327,Cultured PMNs from HVT + GM-CSF + PanPI3K Inhibitor, t=6h,GM-CSF + PanPI3K_10,EXCLUDE_cultured
+GSM1979328,Cultured PMNs from HVT + GM-CSF + PI3Kd Inhibitor, t=6h,GM-CSF + PI3Kd_10,EXCLUDE_cultured
+GSM1979329,Cultured PMNs from HVT + GM-CSF + PI3Kg Inhibitor, t=6h,GM-CSF + PI3Kg_10,EXCLUDE_cultured
+GSM1979330,PMNs from ARDS patient,ARDS_11,ARDS
+GSM1979331,PMNs from HVT,HVT_11,Control
+GSM1979332,PMNs from ARDS patient,ARDS_12,ARDS
+GSM1979333,PMNs from HVT,HVT_12,Control

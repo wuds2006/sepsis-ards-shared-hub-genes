@@ -1,0 +1,11 @@
+target,pdb,ligand,mode,rmsd_A,affinity_kcal_mol,top_ranked
+UPP1,3EUF,BAU,1,1.535,-8.646,True
+UPP1,3EUF,BAU,2,6.369,-7.454,False
+UPP1,3EUF,BAU,3,7.231,-6.942,False
+UPP1,3EUF,BAU,4,8.824,-6.739,False
+UPP1,3EUF,BAU,5,6.563,-6.413,False
+VNN1,7SLV,9TC,1,0.689,-9.673,True
+VNN1,7SLV,9TC,2,1.523,-9.413,False
+VNN1,7SLV,9TC,3,3.581,-8.798,False
+VNN1,7SLV,9TC,4,2.554,-8.529,False
+VNN1,7SLV,9TC,5,6.471,-7.555,False

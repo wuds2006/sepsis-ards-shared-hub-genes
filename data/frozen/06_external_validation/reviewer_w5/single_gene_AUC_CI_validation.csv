@@ -1,0 +1,13 @@
+"cohort","gene","AUC","ci_low","ci_high"
+"GSE243066 (ARDS validation, 34/15)","CDK5RAP2",0.782,0.655,0.909
+"GSE243066 (ARDS validation, 34/15)","CD177",0.998,0.993,1
+"GSE243066 (ARDS validation, 34/15)","GRB10",0.971,0.929,1
+"GSE243066 (ARDS validation, 34/15)","UPP1",0.935,0.863,1
+"GSE243066 (ARDS validation, 34/15)","EXOSC4",0.831,0.716,0.947
+"GSE243066 (ARDS validation, 34/15)","VNN1",0.982,0.954,1
+"GSE100159 (Sepsis validation, 33/12)","CDK5RAP2",0.934,0.864,1
+"GSE100159 (Sepsis validation, 33/12)","CD177",0.99,0.971,1
+"GSE100159 (Sepsis validation, 33/12)","GRB10",0.982,0.947,1
+"GSE100159 (Sepsis validation, 33/12)","UPP1",0.753,0.54,0.965
+"GSE100159 (Sepsis validation, 33/12)","EXOSC4",0.995,0.983,1
+"GSE100159 (Sepsis validation, 33/12)","VNN1",0.995,0.983,1

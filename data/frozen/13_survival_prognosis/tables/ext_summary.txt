@@ -1,0 +1,6 @@
+LASSO 保留基因数：15（其中 hub 基因 0 个）
+LASSO 选中基因：SNHG1, CD244, RAB13, MUC1, DEFA4, BTN3A2, TLR5, F5, NOV, LCK, ITFG2, MEGF6, EVL, FCER1A, SGK1
+C 指数（校正后）：Clinical=0.606; Hub6=0.566; Clinical + Hub6=0.603; LASSO-179=0.622; Clinical + LASSO-179=0.638
+28 天 AUC：Clinical=0.648; Clinical + Hub6=0.667; Clinical + LASSO-179=0.727; Hub6=0.613; LASSO-179=0.698; RSF (OOB)=0.627
+NRI（+LASSO vs Clinical）=0.132（P=0.0261）；IDI=0.0941
+RSF OOB C 指数=0.610

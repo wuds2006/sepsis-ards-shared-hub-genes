@@ -1,0 +1,51 @@
+cff-version: 1.2.0
+title: "sepsis-ards-shared-hub-genes"
+message: "If you use this software, please cite it using these metadata."
+type: software
+authors:
+  - family-names: "Yang"
+    given-names: "Huobao"
+    orcid: "https://orcid.org/0000-0002-9446-998X"
+  - family-names: "Shen"
+    given-names: "Yanghui"
+    orcid: "https://orcid.org/0000-0003-4874-0502"
+  - family-names: "Chen"
+    given-names: "Wenjun"
+    orcid: "https://orcid.org/0009-0007-9319-7568"
+  - family-names: "Wu"
+    given-names: "Jiali"
+    orcid: "https://orcid.org/0009-0009-1268-5549"
+  - family-names: "Wu"
+    given-names: "Zhimin"
+    orcid: "https://orcid.org/0009-0007-9895-7060"
+  - family-names: "Wu"
+    given-names: "Qihua"
+    orcid: "https://orcid.org/0009-0001-0162-2755"
+  - family-names: "Wu"
+    given-names: "Dansen"
+    orcid: "https://orcid.org/0000-0002-8429-168X"
+    email: "wds_9201851126@fjmu.edu.cn"
+version: 1.2.0
+date-released: "2026-11-08"
+license: MIT
+repository-code: "https://github.com/wuds2006/sepsis-ards-shared-hub-genes"
+abstract: >-
+  Analysis code and derived result tables for the shared hub-gene and
+  immune-signature study of sepsis and ARDS, covering bulk transcriptomic
+  discovery and external validation, machine learning with SHAP, Mendelian
+  randomization, colocalization, SMR-HEIDI, immune deconvolution, GSVA/GSEA,
+  single-cell annotation and communication, virtual knockout, survival
+  modelling, protein-level validation and molecular docking. The repository
+  ships the frozen result tables needed to redraw main Figures 1-10 and
+  Supplementary Figures S1-S27 in four formats, together with the scripts that
+  regenerate them. Raw inputs are public third-party resources and are not
+  redistributed; accessions and versions are listed in the manuscript's data
+  availability statement.
+keywords:
+  - sepsis
+  - ARDS
+  - transcriptomics
+  - machine-learning
+  - Mendelian-randomization
+  - single-cell
+  - drug-repositioning

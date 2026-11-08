@@ -1,0 +1,4 @@
+"cohort","n_cases","n_controls","one_sided_97.5_LB","one_sided_95_LB"
+"GSE76293 (ARDS training)",12,12,0.975,0.979
+"GSE243066 (ARDS in-cohort refit)",34,15,0.993,0.994
+"GSE100159 (Sepsis in-cohort refit)",33,12,0.991,0.992

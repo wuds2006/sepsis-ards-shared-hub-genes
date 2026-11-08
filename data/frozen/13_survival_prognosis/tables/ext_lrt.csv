@@ -1,0 +1,3 @@
+"comparison","chisq","df","P"
+"Clinical + Hub6 vs Clinical",9.22,6,0.161
+"Clinical + LASSO-179 vs Clinical",46.39,1,9.69e-12

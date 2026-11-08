@@ -1,0 +1,19 @@
+# Python packages imported by python/ (see python_version.txt)
+
+anndata
+celloracle
+genomepy
+harmonypy
+matplotlib
+meeko
+numpy
+openmm
+pandas
+pdbfixer
+plip
+pyliftover
+rdkit
+scanpy
+scipy
+sklearn
+urllib
