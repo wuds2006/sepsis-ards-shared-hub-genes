@@ -81,7 +81,7 @@
 
 ## 2026-10-07（二）：DISCUSSION 去防御性表达（14 处，用户确认后执行）
 
-按已确认清单修改 Discussion：①重复堆叠免责各保留一处（混合解读 caveat、GO 分组非实验证据、donor 数、MR 正向零结果、CMap 循环性）；②6 处 "should be read as" 指导式框架保留 limitations 引导句 1 处、其余改直接陈述；③删预防性术语声明（"hub gene" 操作性含义整句）、弱断言（presumably）、防御性收尾（P4/P8 两遍 "rather than" 改正向）、泛化免责声明（"everything here is computational"）。所有具体 limitation（效能、LDSC、VNN2 选择性、MM/GBSA、n=24、非感染对照未测、nomogram 0.708、无临床协变量）全部保留。不新增事实、不改数据、不动引用编号。Discussion 字数变化见脚本输出。同步更新 02_Manuscript_Revised.md、03_Manuscript_Translation_CN.md、manuscript_revised.docx（step95 重生成）。脚本：scripts/step101_discussion_deai.py。
+按已确认清单修改 Discussion：①重复堆叠免责各保留一处（混合解读 caveat、GO 分组非实验证据、donor 数、MR 正向零结果、CMap 循环性）；②6 处 "should be read as" 指导式框架保留 limitations 引导句 1 处、其余改直接陈述；③删预防性术语声明（"hub gene" 操作性含义整句）、弱断言（presumably）、防御性收尾（P4/P8 两遍 "rather than" 改正向）、泛化免责声明（"everything here is computational"）。所有具体 limitation（效能、LDSC、VNN2 选择性、MM/GBSA、n=24、非感染对照未测、nomogram 0.708、无临床协变量）全部保留。不新增事实、不改数据、不动引用编号。Discussion 字数变化见脚本输出。同步更新 02_Manuscript_Revised.md、03_Manuscript_Translation_CN.md、manuscript_revised.docx（step95 重生成）。脚本：内部一致性脚本（不随仓库分发）。
 
 ---
 
