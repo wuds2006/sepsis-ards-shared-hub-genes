@@ -1672,3 +1672,12 @@ Data Availability 末段原写 "all 27 supplementary tables as submitted"，是 
 作者报"Zenodo 网站登录不了"。复测：`zenodo.org/login/` 返回 200、DOI 解析 302 正常，`/etc/hosts` 中 2026-10-26 追加的三条直连记录仍在；**`github.com/login/oauth/authorize` 超时 20 s 无响应（HTTP 000），而 `orcid.org` 全部 200**。即登录页能打开，但点"Sign in with GitHub"后卡在 OAuth 跳转。与 10-26 的 DNS 污染不是同一原因（那次是整站打不开）。
 
 处置：本次归档不需要登录 Zenodo，未做任何网络改动。若日后需在网页端编辑记录元数据，可改用 ORCID 登录（需先在账号内绑定），或改走手机热点。
+
+## 第二十批 · 正文图引用与表注勘误（2026-11-08）
+
+按作者（吴医生）逐条确认的修改表执行定点勘误，不涉及任何数值与结论：
+
+- **正文面板级图引用勘误 11 处**（结果部分）：富集段 Figure 2→Supplementary Figure S23；机器学习段 Figure 3A,B→2A,B、Figure 3C→3A、删 Figure 3D 引用（留 Supplementary Figure S27）；免疫段 Figure 7B to F→7B、Figure 7G,H→7C,D；单细胞段 Figure 8A,B→Supplementary Table S26、Figure 8B→Supplementary Figure S12A、Figure 8F→8E、Figure 8C,G→8C、Figure 8D,H→8F。同步 `Manuscript_Revised.md` 与源目录 `02_Manuscript_Revised.md`。改后全文扫描：所有正文图引用均落在各图实际面板范围内。
+- **Table 1 平台更正**：GSE243066 行 "Illumina NovaSeq 6000 RNA sequencing (GPL30209)" → "MGISEQ-2000RS RNA sequencing (GPL30209)"（GEO 官方记录 GPL30209 = MGISEQ-2000RS (Homo sapiens)，已核实）。
+- **Table 3 注补充表编号更正**：S21→S20（MM/GBSA 数据在 S20，S21 为 Open Targets 可处理性）；S19→S5（pLDDT 评估在 S5，S19 为分子对接；另一处正确的分子对接 S19 引用未动）。
+- **同步范围**：两份 `Manuscript_Submission.docx`（`AJRCCM投稿材料_2026-11-07/Manuscript/` 与 `repo/manuscript/`，run 层定点替换，保留原格式，段落总数 217 不变）。
