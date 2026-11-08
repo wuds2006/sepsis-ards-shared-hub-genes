@@ -14,7 +14,7 @@ S1–S27 的绘图脚本（R，四格式导出：300 dpi PNG、矢量 PDF、LZW 
 ## 1. 目录
 
 ```
-Code/
+<repo>/
 ├── run_all.sh                 全流程驱动（可按阶段单独跑）
 ├── R/
 │   ├── 00_common.R            分析阶段共享：路径、配色、主题、工具函数
@@ -31,8 +31,14 @@ Code/
 ├── data/
 │   ├── frozen/                13 个模块的结果表（脚本读这些表出图）
 │   └── derived/               由图件层从原始矩阵整理出的长表
+├── manuscript/                英文正文、中文译稿、主图图注、补充方法与材料、补充表 S1–S28
 ├── environment/               R / Python 版本、包清单、安装脚本
-└── docs/                      METHODS_TO_CODE.md、DATA_SOURCES.md
+├── docs/                      METHODS_TO_CODE.md、DATA_SOURCES.md
+├── DATA_INVENTORY.md / .csv   公共输入清单：登录号、平台、样本取舍、取用日期
+├── FETCH_PUBLIC_DATA.md       取数手册：每个输入的下载命令
+├── RESULTS_TO_CODE.md         13 个结果模块 → 脚本 → 输出文件 对照
+├── PATHS.md                   路径约定（FIG_ROOT / DOCK_ROOT / RAW_ROOT）
+└── MANIFEST.txt               全仓文件的 sha256 清单
 ```
 
 补充图 S26、S27 与补充表 S27、S28 对应的三项单细胞分析：
@@ -48,7 +54,7 @@ Code/
 
 ## 2. 怎么跑
 
-工作目录固定为 `Code/`。
+工作目录固定为仓库根目录。
 
 ```bash
 # 只重画图（不需要原始表达矩阵，data/frozen 已足够）
@@ -99,6 +105,7 @@ Human Protein Atlas Blood Atlas v24、ChEMBL 37、Open Targets、CMap。
 | 孟德尔随机化 | 脚本齐全；SMR 1.03 与 LDSC 为外部二进制，用法见 `shell/04_run_smr_heidi.sh` |
 | 分子对接 | AutoDock Vina 1.2.5 + Meeko + OpenMM；受体/配体结构从 PDB、AlphaFold 获取，本仓库不存构象 |
 | CMap / ChEMBL / Open Targets | 脚本齐全，需联网查询；结果为 2026 年 9 月快照 |
+| 稿件与补充表 | `manuscript/` 内为随稿提交的版本：英文正文、中文译稿、主图图注、补充方法、补充材料，以及补充表 S1–S28（含 Figure S26/S27 的图注） |
 
 上游脚本保留了当初的目录名作为输出位置（`01_DEG/`、`05_ML_SHAP/` 等），
 这些目录已在 `.gitignore` 中排除，重跑不会污染仓库。
