@@ -25,17 +25,14 @@ authors:
     given-names: "Dansen"
     orcid: "https://orcid.org/0000-0002-8429-168X"
     email: "wds_9201851126@fjmu.edu.cn"
-version: 1.2.0
+version: 1.2.1
 date-released: "2026-11-08"
 license: MIT
 repository-code: "https://github.com/wuds2006/sepsis-ards-shared-hub-genes"
 identifiers:
   - type: doi
-    value: "10.5281/zenodo.24048653"
-    description: "Version 1.2.0"
-  - type: doi
     value: "10.5281/zenodo.23668532"
-    description: "Concept DOI; always resolves to the latest version"
+    description: "Concept DOI; always resolves to the latest archived version"
   - type: url
     value: "https://github.com/wuds2006/sepsis-ards-shared-hub-genes"
 abstract: >-
